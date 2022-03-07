@@ -1,0 +1,555 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Crediblue API - Documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="ticlekiwi">
+
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/hightlightjs-dark.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css" media="all">
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+<div class="left-menu">
+    <div class="content-logo">
+        <div class="logo">
+            <img alt="" title="" src="images/logo.png" height="32" />
+        </div>
+        <button class="burger-menu-icon" id="button-menu-mobile">
+            <svg width="34" height="34" viewBox="0 0 100 100"><path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"></path><path class="line line2" d="M 20,50 H 80"></path><path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"></path></svg>
+        </button>
+    </div>
+    <div class="mobile-menu-closer"></div>
+    <div class="content-menu">
+        <div class="content-infos">
+            <div class="info"><b>Version:</b> 2.34.1</div>
+            <div class="info"><b>Last Updated:</b> 04 Mar, 2022</div>
+        </div>
+        <ul>
+            <li class="scroll-to-link " data-target="content-get-partner">
+                <a>Partners</a>
+            </li>
+            <li class="scroll-to-link" data-target="content-post-password">
+                <a>Password</a>
+            </li>
+
+            <li class="scroll-to-link " data-target="content-post-simulation">
+                <a>Simulations</a>
+            </li>
+            <li class="scroll-to-link" data-target="content-post-token">
+                <a>Tokens</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="content-page">
+    <div class="content-code"></div>
+    <div class="content">
+        <div class="overflow-hidden content-section" id="content-get-partner">
+            <h1><strong>Partners</strong> <small>Management the partners</small></h1>
+            <p>Get a partner by CPF or CNPJ:<br>
+               <button class="get">Get</button><code class="higlighted break-word">/external/partners/{cpfCnpj}</code>
+            </p>
+            <pre><code class="json">
+	
+Example Value | Model
+{
+    "contacts": [
+      {
+        "bestContactCanal": "string",
+        "bestTimeToCall": "string",
+        "birthDate": "string",
+        "contactType": "LEGAL_REPRESENTATIVE",
+        "cpf": "string",
+        "email": "string",
+        "facebook": "string",
+        "gender": "M",
+        "id": 0,
+        "instagram": "string",
+        "linkedin": "string",
+        "name": "string",
+        "role": "string",
+        "telephone": "string"
+      }
+    ],
+    "email": "string",
+    "id": 0,
+    "name": "string",
+    "telephone": "string"
+  }
+            </code></pre>
+
+            <h4>PARAMETERS</h4>
+           </br>
+            <table class="central-overflow-x">
+                <thead>
+                <tr>
+                    <th><strong>Name</strong></th>
+                    <th><strong>Description</strong></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><strong>cpfCnpj<sup>*required</sup></strong></td>
+                    <td>Partner CPF/ CNPJ from which partner object will retrieve</td>
+                </tr>
+
+                <tr>
+                    <td><strong>string</strong></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><strong><i>(path)</i></strong></td>
+                    <td></td>
+                </tr>
+            
+                </tbody>
+            </table>
+
+            <h4>RESPONSES</h4>
+            </br>
+            <table class="central-overflow-x">
+                <thead>
+                <tr>
+                    <th><strong>Code</strong></th>
+                    <th><strong>Descriptio</strong>n</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="success">
+                    <td><strong>200</strong></td>
+                    <td><i>Successfully retrieved object</i></td>
+                </tr>
+
+                <tr class="not">
+                    <td><strong>401</strong></td>
+                    <td><i>You are not authorized to view the resource</i></td>
+                </tr>
+
+                <tr class="forbidden">
+                    <td><strong>403</strong></td>
+                    <td><i>Accessing the resource you were trying to reach is forbidden</i></td>
+                </tr>
+
+                <tr class="found">
+                    <td><strong>404</strong></td>
+                    <td><i>The resource you were trying to reach is not found</i></td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="overflow-hidden content-section" id="content-post-password">
+            <h1><strong>Password</strong> <small>Management the password of the user</small></h1>
+            <p>Request password reset via email:<br>
+                <code class="higlighted break-word">/external/password/forgot/{email}</code>
+            </p>
+            <pre><code class="json">
+	
+Example Value | Model
+{
+    "mensagemDev": "string",
+    "mensagemUsuario": "string"
+ }
+            </code></pre>
+
+            <h4>PARAMETERS</h4>
+           </br>
+            <table class="central-overflow-x">
+                <thead>
+                <tr>
+                    <th><strong>Name</strong></th>
+                    <th><strong>Description</strong></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><strong>email<sup>*required</sup></strong></td>
+                    <td>Email registered in the system that will be used to request token for password reset</td>
+                </tr>
+
+                <tr>
+                    <td><strong>string</strong></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><strong><i>(path)</i></strong></td>
+                    <td></td>
+                </tr>
+            
+                </tbody>
+            </table>
+
+            <h4>RESPONSES</h4>
+            </br>
+            <table class="central-overflow-x">
+                <thead>
+                <tr>
+                    <th><strong>Code</strong></th>
+                    <th><strong>Descriptio</strong>n</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><strong>200</strong></td>
+                    <td><i>Successfully retrieved object</i></td>
+                </tr>
+
+                <tr>
+                    <td><strong>201</strong></td>
+                    <td><i>Created</i></td>
+                </tr>
+
+                <tr>
+                    <td><strong>401</strong></td>
+                    <td><i>You are not authorized to view the resource</i></td>
+                </tr>
+
+                <tr>
+                    <td><strong>403</strong></td>
+                    <td><i>Accessing the resource you were trying to reach is forbidden</i></td>
+                </tr>
+
+                <tr>
+                    <td><strong>404</strong></td>
+                    <td><i>The resource you were trying to reach is not found</i></td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+
+        <div class="overflow-hidden content-section" id="content-post-simulation">
+            <h1><strong>Simulations</strong> <small>Management the simulation</small></h1>
+            <p>Create a new simulation:<br>
+                <code class="higlighted break-word">/external/simulations</code>
+            </p>
+            <pre><code class="json">
+	
+Example Value | Model
+{
+    "amortizationType": "PRICE",
+    "installmentsAmount": 0,
+    "lead": {
+      "address": {
+        "cep": "string",
+        "city": "string",
+        "complement": "string",
+        "country": "string",
+        "location": {
+          "lat": "string",
+          "lng": "string"
+        },
+        "neighborhood": "string",
+        "number": "string",
+        "street": "string",
+        "uf": "AC"
+      },
+      "birthDate": "string",
+      "cpfCnpj": "string",
+      "email": "string",
+      "familyIncome": 0,
+      "maritalStatus": "CASADO",
+      "name": "string",
+      "spouseName": "string",
+      "telephone": "string"
+    },
+    "leadSourceIncome": "string",
+    "loanAmount": 0,
+    "loanObjective": "QUITAR_DIVIDA",
+    "operationType": "HOME_EQUITY",
+    "property": {
+      "address": {
+        "cep": "string",
+        "city": "string",
+        "complement": "string",
+        "country": "string",
+        "location": {
+          "lat": "string",
+          "lng": "string"
+        },
+        "neighborhood": "string",
+        "number": "string",
+        "street": "string",
+        "uf": "AC"
+      },
+      "balanceDue": 0,
+      "bathroomsQuantity": 0,
+      "buildingType": "APARTMENT",
+      "parkingLotQuantity": 0,
+      "privateArea": 0,
+      "propertyType": "FLAT",
+      "propertyValue": 0,
+      "roomsQuantity": 0,
+      "suitesQuantity": 0
+    }
+  }
+            </code></pre>
+
+            <h4>PARAMETERS</h4>
+           </br>
+            <table class="central-overflow-x">
+                <thead>
+                <tr>
+                    <th><strong>Name</strong></th>
+                    <th><strong>Description</strong></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><strong>Simulation<sup>*required</sup></strong></td>
+                    <td>Simulation object store in database table</td>
+                </tr>
+
+                <tr>
+                    <td><strong><i>(path)</i></strong></td>
+                    <td></td>
+                </tr>
+            
+                </tbody>
+            </table>
+
+            <h4>RESPONSES</h4>
+            </br>
+            <table class="central-overflow-x">
+                <thead>
+                <tr>
+                    <th><strong>Code</strong></th>
+                    <th><strong>Descriptio</strong>n</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><strong>200</strong></td>
+                    <td><i>OK</i></td>
+                </tr>
+
+                <tr>
+                    <td><strong>201</strong></td>
+                    <td><i>Simulation persisted in the database</i></td>
+                </tr>
+
+                <tr>
+                    <td><strong>401</strong></td>
+                    <td><i>You are not authorized to view the resource</i></td>
+                </tr>
+
+                <tr>
+                    <td><strong>403</strong></td>
+                    <td><i>Accessing the resource you were trying to reach is forbidden</i></td>
+                </tr>
+
+                <tr>
+                    <td><strong>404</strong></td>
+                    <td><i>The resource you were trying to reach is not found</i></td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+
+        <div class="overflow-hidden content-section" id="content-post-token">
+            <h1><strong>Tokens</strong> <small>Management the validation token</small></h1>
+            <p>SendSMSPinCode:<br>
+                <code class="higlighted break-word">/external/2fa</code>
+            </p>
+            <pre><code class="json">
+	
+Example Value | Model
+{
+    "id": 0,
+    "sendBy": "string",
+    "type": "USER"
+  }
+            </code></pre>
+
+            <h4>PARAMETERS</h4>
+           </br>
+            <table class="central-overflow-x">
+                <thead>
+                <tr>
+                    <th><strong>Name</strong></th>
+                    <th><strong>Description</strong></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><strong>tokenDto<sup>*required</sup></strong></td>
+                    <td>Token request object</td>
+                </tr>
+
+                <tr>
+                    <td><strong><i>(body)</i></strong></td>
+                    <td></td>
+                </tr>
+            
+                </tbody>
+            </table>
+
+            <h4>RESPONSES</h4>
+            </br>
+            <table class="central-overflow-x">
+                <thead>
+                <tr>
+                    <th><strong>Code</strong></th>
+                    <th><strong>Descriptio</strong>n</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><strong>200</strong></td>
+                    <td><i>OK</i></td>
+                </tr>
+
+                <tr>
+                    <td><strong>201</strong></td>
+                    <td><i>Created</i></td>
+                </tr>
+
+                <tr>
+                    <td><strong>401</strong></td>
+                    <td><i>Unauthorized</i></td>
+                </tr>
+
+                <tr>
+                    <td><strong>403</strong></td>
+                    <td><i>Forbidden</i></td>
+                </tr>
+
+                <tr>
+                    <td><strong>404</strong></td>
+                    <td><i>Forbidden</i></td>
+                </tr>
+                </tbody>
+            </table>
+
+
+
+            <h1><strong>Tokens</strong> <small>Management the validation token</small></h1>
+            <p>Checks if pin code is valid:<br>
+                <code class="higlighted break-word">/external/2fa/{id}/{type}/{token}</code>
+            </p>
+            <pre><code class="json">
+
+            </code></pre>
+
+            <h4>PARAMETERS</h4>
+           </br>
+            <table class="central-overflow-x">
+                <thead>
+                <tr>
+                    <th><strong>Name</strong></th>
+                    <th><strong>Description</strong></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><strong>id<sup>*required</sup></strong></td>
+                    <td>id</td>
+                </tr>
+
+                <tr>
+                    <td><strong>integer<i>($int32)</i></strong></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><strong><i>(path)</i></strong></td>
+                    <td></td>
+                </tr>
+
+
+                <tr>
+                    <td><strong>token<sup>*required</sup></strong></td>
+                    <td>token</td>
+                </tr>
+
+                <tr>
+                    <td><strong>String</strong></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><strong><i>(path)</i></strong></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><strong>type<sup>*required</sup></strong></td>
+                    <td>type</td>
+                </tr>
+
+                <tr>
+                    <td><strong>String</strong></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><strong><i>(path)</i></strong></td>
+                    <td><i>Available values : USER, LEAD, PARTNER</i></td>
+                </tr>
+
+                </tbody>
+            </table>
+
+            <h4>RESPONSES</h4>
+            </br>
+            <table class="central-overflow-x">
+                <thead>
+                <tr>
+                    <th><strong>Code</strong></th>
+                    <th><strong>Descriptio</strong>n</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><strong>200</strong></td>
+                    <td><i>OK</i></td>
+                </tr>
+
+                <tr>
+                    <td><strong>201</strong></td>
+                    <td><i>Created</i></td>
+                </tr>
+
+                <tr>
+                    <td><strong>401</strong></td>
+                    <td><i>Unauthorized</i></td>
+                </tr>
+
+                <tr>
+                    <td><strong>403</strong></td>
+                    <td><i>Forbidden</i></td>
+                </tr>
+
+                <tr>
+                    <td><strong>404</strong></td>
+                    <td><i>Forbidden</i></td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+           
+    </div>
+    </div>
+    <div class="content-code"></div>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
