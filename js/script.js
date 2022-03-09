@@ -47,7 +47,6 @@ function calculElements () {
 
 function onScroll () {
     var scroll = window.pageYOffset;
-    console.log('scroll', scroll, elements)
     for (var i = 0; i < elements.length; i++) {
         var section = elements[i];
         if (scroll <= section.maxHeight) {
@@ -86,3 +85,11 @@ window.addEventListener('scroll', function (e) {
     e.preventDefault();
     onScroll();
 });
+
+
+var contextHeight = window.innerHeight;
+document.getElementById('content-get-partner').style.height = contextHeight + 'px';
+document.getElementById('content-size').style.height = contextHeight + 'px';
+document.getElementById('content-size2').style.height = contextHeight + 'px';
+
+

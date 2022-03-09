@@ -4,7 +4,7 @@
 ----------------------------------------------------------------------------------------*/
 
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, h4, h5, h6, p, blockquote,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -141,7 +141,6 @@ pre{
     display: inline-block;
     margin-left: 10px;
     vertical-align: middle;
-    color: #323F4C;
     font-size: 1.1em;
 }
 .content-menu{
@@ -204,20 +203,10 @@ pre{
     min-height: 100%;
     padding-bottom: 1px;
 }
-.content-code{
-    width: 60%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: #2c2e35;
-}
 .content {
     position: relative;
     z-index: 30;
 }
-
-
 .break-word {
     word-break: break-word;
     overflow-wrap: break-word;
@@ -235,10 +224,8 @@ pre{
 .content-page .content pre {
     max-width: 730px;
 }
-.content pre,
+
 .content blockquote {
-    background-color: #2c2e35;
-    border-color: #2c2e35;
     color: #fff;
     padding: 0 28px 2em;
     margin: 0;
@@ -248,18 +235,10 @@ pre{
     box-sizing: border-box;
 }
 .content pre code, .content pre {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.5;
 }
-.content blockquote,
-.content pre,
-.content pre code{
-    padding-top: 0;
-    margin-top: 0;
-}
-.content pre code{
-    margin-top: -2em;
-}
+
 .content table {
     font-size: 0.825em;
     margin-bottom: 1.5em;
@@ -343,25 +322,14 @@ html.menu-opened .burger-menu-icon  .line3 {
 ----------------------------------------------------------------------------------------*/
 
 @media only screen and (max-width:980px){
-    .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .content p, .content table, .content ul, .content ol, .content aside, .content dl, .content ul, .content ol {
+    .content h1, .content h2, .content h3, .content h4, .content h5,
+    .content h6, .content p, .content table, .content ul, .content ol,
+    .content aside, .content dl, .content ul, .content ol {
         margin-right: 0;
     }
     .content .central-overflow-x {
         margin: 0;
         padding: 0 28px;
-    }
-    .content-code{
-        display: none;
-    }
-    .content pre, .content blockquote {
-        margin: 20px 0;
-        padding: 28px;
-        display: block;
-        width: auto;
-        float: none;
-    }
-    .content pre code {
-        margin-top: 0;
     }
 }
 
@@ -418,7 +386,6 @@ html.menu-opened .burger-menu-icon  .line3 {
         left: 0;
         right: 0;
         z-index: 4;
-        background-color: #01182e;
     }
     .content-logo .logo {
         margin-right: 65px;
@@ -438,14 +405,6 @@ small{
 sup{
     font-size: 10px;
     color: red;
-}
-
-.json, .hljs{
-    background-color: #2c2e35;
-    border: solid 1px blue;
-    width: 320px;
-    padding: 5rem;
-
 }
 
 .line, .line1
@@ -479,10 +438,37 @@ sup{
     padding: 5px 15px 5px 15px;
  }
 
+ .content-section{
+     clear: both;
+ }
+ code{
+     max-height: 720px;
+ }
+
  .content-text{
      width: 35%;
+     position: relative;
+     float: left;
      padding: 2rem;
  }
+
+.content-code{
+    background-color: #323F4C;
+    width: 60%;
+    position: relative;
+    float: left;
+}
+
+.container-code{
+    background-color: #323F4C;
+    width: 400px;
+    margin: 1rem;
+    display: inline-block;
+    position: relative;
+    float: left;
+}
+
+
 
 
 
