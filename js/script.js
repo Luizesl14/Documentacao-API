@@ -1,4 +1,6 @@
 
+// menu hamburguer
+
 var elements = [];
 
 [].forEach.call(document.querySelectorAll('.scroll-to-link'), function (div) {
@@ -24,6 +26,9 @@ document.querySelector('.left-menu .mobile-menu-closer').onclick = function (e) 
     document.querySelector('html').classList.remove('menu-opened');
 }
 
+
+//funcion scroll top
+
 function debounce (func) {
     var timer;
     return function (event) {
@@ -33,16 +38,45 @@ function debounce (func) {
 }
 
 function calculElements () {
+    var totalHeight = 0;
     elements = [];
     [].forEach.call(document.querySelectorAll('.content-section'), function (div) {
         var section = {};
         section.id = div.id;
+        totalHeight += div.offsetHeight;
+        section.maxHeight = totalHeight - 25;
         elements.push(section);
     });
+    onScroll();
 }
 
-
-
+function onScroll () {
+    var scroll = window.pageYOffset;
+    for (var i = 0; i < elements.length; i++) {
+        var section = elements[i];
+        if (scroll <= section.maxHeight) {
+            var elems = document.querySelectorAll(".content-menu ul li");
+            [].forEach.call(elems, function (el) {
+                el.classList.remove("active");
+            });
+            var activeElems = document.querySelectorAll(".content-menu ul li[data-target='" + section.id + "']");
+            [].forEach.call(activeElems, function (el) {
+                el.classList.add("active");
+            });
+            break;
+        }
+    }
+    if (window.innerHeight + scroll + 5 >= document.body.scrollHeight) { // end of scroll, last element
+        var elems = document.querySelectorAll(".content-menu ul li");
+        [].forEach.call(elems, function (el) {
+            el.classList.remove("active");
+        });
+        var activeElems = document.querySelectorAll(".content-menu ul li:last-child");
+        [].forEach.call(activeElems, function (el) {
+            el.classList.add("active");
+        });
+    }
+}
 
 calculElements();
 window.onload = () => {
@@ -62,5 +96,3 @@ var contextHeight = window.innerHeight;
 document.getElementById('content-get-partner').style.height = contextHeight + 'px';
 document.getElementById('content-size').style.height = contextHeight + 'px';
 document.getElementById('content-size2').style.height = contextHeight + 'px';
-
-

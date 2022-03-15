@@ -57,6 +57,7 @@ i{
     position: relative;
     overflow: hidden;
 }
+
 .content a{
     color: #00a8e3;
     text-decoration: none;
@@ -107,20 +108,19 @@ pre{
     bottom: 0;
     width: 200px;
     box-sizing: border-box;
-    background-color: #fafafa;
+    background-color: #00215e;
     overflow-x: hidden;
     font-size: 18px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, .1) ;
 }
 .left-menu .content-infos {
     position: relative;
-    padding: 13.25%;
-    margin-bottom: 20px;
+    padding: 5%;
 }
 .left-menu .info {
+    color: #9ac4ec;
+    text-align: center;
     position: relative;
     font-size: 14px;
-    margin-top: 5px;
 }
 .left-menu .info b {
     font-weight: 500;
@@ -128,10 +128,10 @@ pre{
 .content-logo{
     position: relative;
     display: block;
-    width: 100%;
+    width: 70%;
+    margin: 5% auto 0;
     box-sizing: border-box;
-    padding: 1.425em 11.5%;
-    padding-right: 0;
+    padding-left:5%;
 }
 .content-logo img{
     display: inline-block;
@@ -144,10 +144,7 @@ pre{
     vertical-align: middle;
     font-size: 1.1em;
 }
-.content-menu{
-    margin: 2em auto 2em;
-    padding: 0 0 100px;
-}
+
 .content-menu ul{
     width: 150px;
     list-style: none;
@@ -155,25 +152,31 @@ pre{
     padding: 0;
     line-height: 28px;
 }
+
+ li{
+    color: #82b6e3;
+    font-size: 12px;
+    padding: 8px 15px 8px 8px;
+    text-align: center;
+    border-radius: 30px;
+    border: 1px solid #82b6e3;
+    margin-top: 8px;
+}
+
+
 .content-menu ul li{
     list-style: none;
-    margin: 0;
-    padding: 0px;
-    line-height: 0;
-    border-radius: 50px;
-    border: 1px solid rgb(255, 255, 255);
 }
 .content-menu ul li:hover,
-.content-menu ul li.active{
-    background-color:#034c8f;
-    color: #fff;
+.content-menu ul li:active{
+    background-image:linear-gradient(90deg, #0280f3, #05f1db);
+    border-image:linear-gradient(90deg, #0280f3, #05f1db);
+    border: 1px solid;
+    transition: -2s;
+    color: #012e59;
+    border-radius: 30px;
 }
-.content-menu ul li:hover a,
-.content-menu ul li.active a{
-    color: #fff;
-    border-radius: 50px;
-    border: 1px solid #034c8f;
-}
+
 @media (hover: none) {
     .content-menu ul li:not(.active):hover {
         background-color: inherit;
@@ -182,15 +185,7 @@ pre{
         color: #777A7A;
     }
 }
-.content-menu ul li a{
-    padding: 12px 13.25%;
-    color: #034c8f;
-    letter-spacing: 0.025em;
-    line-height: 1.1;
-    text-align: center;
-    display: block;
-    text-transform: capitalize;
-}
+
 
 /* CONTENT-PAGE
 ----------------------------------------------------------------------------------------*/
@@ -198,7 +193,7 @@ pre{
 .content-page {
     position: relative;
     box-sizing: border-box;
-    margin-left: 230px;
+    margin-left: 200px;
     z-index: 2;
     background-color: #fff;
     min-height: 100%;
@@ -417,14 +412,14 @@ html.menu-opened .burger-menu-icon  .line3 {
     }
 
     .content-code{
-        background-color: #323F4C;
+        background-color: #012973;
         width: 100%;
         position: relative;
         float: right;
     }
 
     .container-code{
-        background-color: #323F4C;
+        background-color: transparent;
         min-width: 800px;
         margin: 10px;
         display: block;
@@ -491,14 +486,14 @@ sup{
  }
 
 .content-code{
-    background-color: #323F4C;
+    background-color: #00215e;
     width: 58%;
     position: relative;
     float: right;
 }
 
 .container-code{
-    background-color: #323F4C;
+    background-color: transparent;
     width: 40%;
     display: inline-block;
     position: relative;
@@ -521,7 +516,7 @@ sup{
     }
 
     .content-code {
-        background-color: #323F4C;
+        background-color: #00215e;
         width: 100%;
         position: relative;
         float: right;
@@ -529,7 +524,7 @@ sup{
     }
 
     .container-code {
-        background-color: #323F4C;
+        background-color: transparent;
         width: 43%;
         min-width: 33%;
         margin: 2%;
@@ -557,7 +552,7 @@ sup{
         }
 
         .content-code {
-            background-color: #323F4C;
+            background-color: #00215e;
             width: 100%;
             position: relative;
             float: right;
@@ -565,7 +560,7 @@ sup{
         }
 
         .container-code {
-            background-color: #323F4C;
+            background-color: transparent;
             width: 85%;
             margin: 2%;
             display: inline-block;
@@ -579,17 +574,32 @@ sup{
         }
     }
 
+div::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+div::-webkit-scrollbar-track {
+    background-color: #2f4d88;
+}
+
+div::-webkit-scrollbar-thumb {
+    background-color: #001642;
+    border-radius: 20px;
+}
+
 
     body::-webkit-scrollbar {
         width: 8px;
     }
 
+
     body::-webkit-scrollbar-track {
-        background-color: #fff;
+        background-color: #2f4d88;
     }
 
     body::-webkit-scrollbar-thumb {
-        background-color: #1a2128;
+        background-color: #001642;
         border-radius: 20px;
     }
 
@@ -598,17 +608,19 @@ sup{
     }
 
     code::-webkit-scrollbar-track {
-        background-color: #323F4C;
+        background-color: #2f4d88;
     }
 
     code::-webkit-scrollbar-thumb {
-        background-color: #27313b;
+        background-color: #001642;
         border-radius: 20px;
     }
 
-/* BROWSER AND NON-SEMANTIC STYLING
-----------------------------------------------------------------------------------------*/
+   .json{
+        background-color: #00215e;
+    }
 
-.cf:before, .cf:after { content: ""; display: block; }
-.cf:after { clear: both; }
-.ie6 .cf { zoom: 1 }
+.table-content{
+    margin:  0 auto;
+    padding-left: 10%;
+}
