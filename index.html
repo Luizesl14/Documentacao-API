@@ -161,7 +161,7 @@
             <section class="content-code" id="content-size2">
                 <div class="container-code">
                     <h1><strong class="light">Example Value | Model </strong></h1>
-                    <pre>
+                    <pre class="scroller">
                         <code class="json">
 Example Value | Model
 {
@@ -600,9 +600,9 @@ Example Value | Model
             <section class="content-text" id="content-size">
                 <div class="table-content">
                     <h1><strong>Tokens</strong> <small>Management the validation token</small></h1>
-                    <p>Get a partner by CPF or CNPJ:<br>
-                        <button class="post">POST</button>
-                        <code class="higlighted break-word">/external/password/forgot/{email}</code>
+                    <p>Checks if pin code is valid:<br>
+                        <button class="get">GET</button>
+                        <code class="higlighted break-word">/external/2fa/{id}/{type}/{token}</code>
                     </p>
                     <h4>PARAMETERS</h4>
                     <table class="central-overflow-x">
@@ -613,6 +613,48 @@ Example Value | Model
                         </tr>
                         </thead>
                         <tbody>
+                        <tr>
+                            <td><strong>id<sup>*required</sup></strong></td>
+                            <td>id</td>
+                        </tr>
+                        <tr>
+                            <td><strong>integer($int32)</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong><i>(path)</i></strong></td>
+                            <td></td>
+                        </tr>
+
+
+                        <tr>
+                            <td><strong>token<sup>*required</sup></strong></td>
+                            <td>token</td>
+                        </tr>
+                        <tr>
+                            <td><strong>string</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong><i>(path)</i></strong></td>
+                            <td></td>
+                        </tr>
+
+
+                        <tr>
+                            <td><strong>type<sup>*required</sup></strong></td>
+                            <td>type</td>
+                        </tr>
+                        <tr>
+                            <td><strong>string</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong><i>(path)</i></strong></td>
+                            <td>Available values : USER, LEAD, PARTNER</td>
+                        </tr>
+
+
                         <tr>
                             <td><strong>email<sup>*required</sup></strong></td>
                             <td>Email registered in the system that will be used to request token for password reset</td>
@@ -674,11 +716,6 @@ Example Value | Model
                 <div class="container-code">
                     <pre>
                         <code class="json">
-    Example Value | Model
-   {
-      "mensagemDev": "string",
-      "mensagemUsuario": "string"
-   }
                         </code>
                     </pre>
                 </div>

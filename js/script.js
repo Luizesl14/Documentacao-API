@@ -96,5 +96,9 @@ var contextHeight = window.innerHeight;
 
 document.getElementById('content-code-password').style.height = contextHeight + 'px';
 document.getElementById('content-code-token').style.height = contextHeight + 'px';
-document.getElementById('content-code').style.height = contextHeight + 'px';
+document.getElementById('content-code').style.height = (contextHeight + 300) + 'px' ;
+
+
+document.getElementsByClassName('.content-section').style.height =(contextHeight + 300) + 'px';
+
 

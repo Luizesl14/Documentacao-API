@@ -601,7 +601,6 @@ div::-webkit-scrollbar-thumb {
     border-radius: 20px;
 }
 
-
     body::-webkit-scrollbar {
         width: 8px;
     }
@@ -637,3 +636,5 @@ div::-webkit-scrollbar-thumb {
     margin:  0 auto;
     padding-left: 3%;
 }
+
+
