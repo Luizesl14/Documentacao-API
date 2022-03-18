@@ -87,17 +87,6 @@ p, .content ul, .content ol{
     clear: both;
 }
 
-code,
-pre{
-    font-family: 'Source Code Pro', monospace;
-    font-weight: bolder;
-}
-.higlighted{
-    background-color: rgba(0,0,0,0.05);
-    padding: 3px;
-    border-radius: 3px;
-}
-
 /* LEFT-MENU
 ----------------------------------------------------------------------------------------*/
 
@@ -158,60 +147,6 @@ pre{
     line-height: 28px;
 }
 
- li{
-    color: #82b6e3;
-    font-size: 12px;
-    padding: 8px 15px 8px 8px;
-    text-align: center;
-    border-radius: 30px;
-    border: 1px solid #82b6e3;
-    margin-top: 8px;
-}
-
-
-.content-menu ul li{
-    list-style: none;
-}
-
-
-.content-menu ul li:hover,
-.content-menu ul li:active{
-    text-decoration: none;
-    background-image:linear-gradient(90deg, #0280f3, #05f1db);
-    border-image:linear-gradient(90deg, #0280f3, #05f1db);
-    border: 1px solid;
-    transition: -2s;
-    color: #012e59;
-    border-radius: 30px;
-}
-
-.btn-ligth{
-    cursor: pointer;
-    background-color: #82b6e3;
-}
-
- .link {
-    text-decoration: none;
-    color:  #012e59;;
-    cursor: pointer;
-}
-
-.link:hover{
-    color: #012e59;
-}
-
-@media (hover: none) {
-    .content-menu ul li:not(.active):hover {
-        background-color: inherit;
-    }
-    .content-menu ul li:not(.active):hover a {
-        color: #777A7A;
-    }
-}
-
-
-/* CONTENT-PAGE
-----------------------------------------------------------------------------------------*/
 
 .content-page {
     position: relative;
@@ -469,51 +404,9 @@ sup{
     font-weight: bold;
 }
 
-/* COLORS*/
-.success{
-   background-color: rgba(30, 255, 0, 0.2);
-}
-
-.not{
-    background-color: rgba(217, 255, 2, 0.2);
- }
-
- .forbidden{
-    background-color: rgba(255, 136, 0, 0.2);
- }
-
- .found{
-    background-color: rgba(255, 0, 0, 0.2);
- }
- .get{
-    background-color: rgb(0, 202, 0);
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 5px 15px 5px 15px;
- }
-.post{
-    background-color: rgb(0, 171, 163);
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 5px 15px 5px 15px;
-}
- h1, .light{
-     color: #fff;
-     text-align: center;
- }
-
- code{
-     max-height: 600px;
- }
 
  .content-text{
-     width: 35%;
+     width: 90%;
      position: relative;
      float: left;
      padding: 2rem;

@@ -56,32 +56,19 @@
             <li class="scroll-to-link " data-target="content-post-simulation">
                 <a>Simulations</a>
             </li>
+
             <li class="scroll-to-link" data-target="content-post-token">
                 <a>Tokens</a>
+            </li>
+
+            <li class="btn-ligth">
+                <a href="#models" class="link">Models</a>
             </li>
         </ul>
 
         </br>
 
-        <div class="content-infos">
-            <div class="info"><b>Models</b></div>
         </div>
-
-        <ul>
-            <li class="content-btn" data-target="content-get-partner">
-                <a class="content-btn" data-target="content-get-partner">* Address</a>
-            </li>
-            <li class="content-btn" data-target="content-post-password">
-                <a>Password</a>
-            </li>
-
-            <li class="content-btn" data-target="content-post-simulation">
-                <a>Simulations</a>
-            </li>
-            <li class="content-btn" data-target="content-post-token">
-                <a>Tokens</a>
-            </li>
-        </ul>
     </div>
 </div>
 
@@ -199,7 +186,7 @@ Example Value | Model
             <section class="content-text" id="content-size-password">
             <div class="table-content">
                 <h1><strong>Password</strong> <small>Request password reset via email</small></h1>
-                    <p>Get a partner by CPF or CNPJ:<br>
+                    <p>Request password reset via email<br>
                         <button class="post">POST</button>
                         <code class="higlighted break-word">/external/password/forgot/{email}</code>
                     </p>
@@ -289,7 +276,7 @@ Example Value | Model
         <section class="content-text" id="content-size-simulation">
             <div class="table-content">
             <h1><strong>Simulations</strong> <small>Management the simulation</small></h1>
-            <p>Get a partner by CPF or CNPJ:<br>
+            <p>Create a new simulation<br>
                 <button class="post">POST</button>
                 <code class="higlighted break-word">/external/simulations</code>
             </p>
@@ -358,7 +345,7 @@ Example Value | Model
             <div class="container-code">
                     <pre>
                         <code class="json">
-    Example Value | Model
+    Example Request | Model
    {
   "amortizationType": "PRICE",
   "installmentsAmount": 0,
@@ -424,7 +411,7 @@ Example Value | Model
             <div class="container-code">
                     <pre>
                         <code class="json">
-    Example Value | Model
+    Example Response | Model
    {
   "amortizationType": "PRICE",
   "installmentsAmount": 0,
@@ -724,6 +711,53 @@ Example Value | Model
 
 
         </div> <!--Fim div Tokens-->
+
+
+        <div class="overflow-hidden content-section" id="content-model-address">
+            <section class="content-text" id="model-address">
+                <div class="table-content">
+                    <h1><strong>Tokens</strong> <small>Management the validation token</small></h1>
+
+                    <table class="central-overflow-x">
+                        <thead>
+                        <tr>
+                            <th><strong>Code</strong></th>
+                            <th><strong>Descriptio</strong>n</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="success">
+                            <td><strong>200</strong></td>
+                            <td><i>Successfully retrieved object</i></td>
+                        </tr>
+
+                        <tr class="not">
+                            <td><strong>201</strong></td>
+                            <td><i>Created</i></td>
+                        </tr>
+
+                        <tr class="forbidden">
+                            <td><strong>401</strong></td>
+                            <td><i>You are not authorized to view the resource</i></td>
+                        </tr>
+
+                        <tr class="found">
+                            <td><strong>403</strong></td>
+                            <td><i>Accessing the resource you were trying to reach is forbidden</i></td>
+                        </tr>
+
+                        <tr class="found">
+                            <td><strong>404</strong></td>
+                            <td><i>The resource you were trying to reach is not found</i></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+        </div> <!--Fim div adress-->
+
 
     </div>
 </div>
