@@ -93,6 +93,8 @@ window.addEventListener('scroll', function (e) {
 
 
 var contextHeight = window.innerHeight;
-document.getElementById('content-get-partner').style.height = contextHeight + 'px';
-document.getElementById('content-size').style.height = contextHeight + 'px';
-document.getElementById('content-size2').style.height = contextHeight + 'px';
+
+document.getElementById('content-code-password').style.height = contextHeight + 'px';
+document.getElementById('content-code-token').style.height = contextHeight + 'px';
+document.getElementById('content-code').style.height = contextHeight + 'px';
+
