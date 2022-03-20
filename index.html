@@ -23,7 +23,7 @@
     <script>hljs.initHighlightingOnLoad();</script>
 </head>
 
-<body>
+<body onresize="onResize()">
 <div class="left-menu">
     <div class="content-logo">
         <div class="logo">
@@ -80,6 +80,8 @@
 
 <div class="content-page">
     <div class="content">
+        <div id="content-feixed">
+        </div>
         <div class="overflow-hidden content-section" id="content-get-partner">
             <section class="content-text" id="content-size-partner">
                 <div class="table-content">
@@ -706,7 +708,7 @@ Example Value | Model
         </section>
 
         <section class="content-code-none" id="content-code-token-none">
-            <div class="container-code">
+            <div class="container-code-none">
                     <pre>
                         <code class="json">
                         </code>
@@ -719,24 +721,20 @@ Example Value | Model
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="js/script.js"></script>
 <script>
-
     let windowHeight = $(window).height();
     let windowWidth = $(window).width();
     let conteTextHeight =$('.content-section-none').height();
     console.log(windowWidth)
-    $(function (){
+
+    function  onResize(){
         if(windowWidth >= 1202){
-            $('.content-section').height(windowHeight)
             $('.content-text').height(windowHeight)
-            $('.content-code').height(windowHeight)
             $('#content-code-token-none').height(conteTextHeight)
         }
-
-
-    });
+    }
+    onResize()
 
     $(window).ready(function(){
-        windowHeight = -windowHeight;
         $('#content-partner').click(function() {
             $('html, body').animate({scrollTop:$('#content-get-partner').position().top}, 500);
         })

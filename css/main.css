@@ -546,6 +546,10 @@ sup{
 }
 
 @media only screen and (max-width:1200px) {
+    #content-feixed{
+        overflow: hidden;
+    }
+
 
     .content-text {
         width: 100%;
@@ -572,6 +576,9 @@ sup{
         position: relative;
         float: left;
     }
+    .container-code-none{
+        height: 120px;
+    }
 
     table {
         width: 100%;
@@ -596,10 +603,19 @@ sup{
         position: relative;
         float: left;
     }
+    .container-code-none{
+        height: 120px;
+    }
 }
 
-.container-code{
-    min-width: 30%px;
+
+#content-feixed{
+    background-color: #00215e;
+    width: 58%;
+    height: 100%;
+    right: 0px;
+    position: absolute;
+    z-index:0;
 }
 
 

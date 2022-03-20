@@ -7,7 +7,6 @@ var elements = [];
     div.onclick = function (e) {
         e.preventDefault();
         var target = this.dataset.target;
-        document.getElementById(target).scrollIntoView({ behavior: 'smooth' });
         var elems = document.querySelectorAll(".content-menu ul li");
         [].forEach.call(elems, function (el) {
             el.classList.remove("active");
@@ -90,6 +89,7 @@ window.addEventListener('scroll', function (e) {
     e.preventDefault();
     onScroll();
 });
+
 
 
 
