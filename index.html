@@ -24,7 +24,7 @@
 </head>
 
 <body onresize="onResize()">
-<div class="left-menu">
+<div class="left-menu" onresize="onResize()">
     <div class="content-logo">
         <div class="logo">
             <img alt="" title="" src="images/logo.png.png" width="120"/>
@@ -721,12 +721,12 @@ Example Value | Model
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="js/script.js"></script>
 <script>
-    let windowHeight = $(window).height();
-    let windowWidth = $(window).width();
-    let conteTextHeight =$('.content-section-none').height();
-    console.log(windowWidth)
 
     function  onResize(){
+        let windowHeight = $(window).height();
+        let windowWidth = $(window).width();
+        let conteTextHeight =$('.content-section-none').height();
+
         if(windowWidth >= 1202){
             $('.content-text').height(windowHeight)
             $('#content-code-token-none').height(conteTextHeight)
