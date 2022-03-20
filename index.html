@@ -11,6 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/hightlightjs-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,23 +49,23 @@
             <div class="info"><b>Version:</b> 2.34.1</div>
         </div>
         <ul>
-            <li class="scroll-to-link " data-target="content-get-partner">
+            <li class="scroll-to-link " id="content-partner">
                 <a>Partners</a>
             </li>
-            <li class="scroll-to-link" data-target="content-post-password">
+            <li class="scroll-to-link" id="content-password">
                 <a>Password</a>
             </li>
 
-            <li class="scroll-to-link " data-target="content-post-simulation">
+            <li class="scroll-to-link " id="content-simulation">
                 <a>Simulations</a>
             </li>
 
-            <li class="scroll-to-link" data-target="content-post-token">
+            <li class="scroll-to-link" id="content-token">
                 <a>Tokens</a>
             </li>
 
-            <li class="btn-ligth">
-                <a href="#models" class="link">Models</a>
+            <li class="scroll-to-link">
+                <a class="link">Models</a>
             </li>
         </ul>
 
@@ -96,15 +99,15 @@
                             </thead>
                             <tbody>
                             <tr>
-                                <td><strong>cpfCnpj<sup>*required</sup></strong></td>
-                                <td>Partner CPF/ CNPJ from which partner object will retrieve</td>
+                                <td class="result-light"><strong>cpfCnpj<sup>*required</sup></strong></td>
+                                <td class="result-light">Partner CPF/ CNPJ from which partner object will retrieve</td>
                             </tr>
                             <tr>
-                                <td><strong>string</strong></td>
+                                <td class="result-light"><strong>string</strong></td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <td><strong><i>(path)</i></strong></td>
+                                <td class="result-light"><strong><i>(path)</i></strong></td>
                                 <td></td>
                             </tr>
 
@@ -120,24 +123,24 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="success">
-                                        <td><strong>200</strong></td>
-                                        <td><i>Successfully retrieved object</i></td>
+                                    <tr>
+                                        <td class="result"><strong>200</strong></td>
+                                        <td class="result"><i>Successfully retrieved object</i></td>
                                     </tr>
 
-                                    <tr class="not">
-                                        <td><strong>401</strong></td>
-                                        <td><i>You are not authorized to view the resource</i></td>
+                                    <tr>
+                                        <td class="result-light"><strong>401</strong></td>
+                                        <td class="result-light"><i>You are not authorized to view the resource</i></td>
                                     </tr>
 
-                                    <tr class="forbidden">
-                                        <td><strong>403</strong></td>
-                                        <td><i>Accessing the resource you were trying to reach is forbidden</i></td>
+                                    <tr>
+                                        <td class="result"><strong>403</strong></td>
+                                        <td class="result"><i>Accessing the resource you were trying to reach is forbidden</i></td>
                                     </tr>
 
-                                    <tr class="found">
-                                        <td><strong>404</strong></td>
-                                        <td><i>The resource you were trying to reach is not found</i></td>
+                                    <tr>
+                                        <td class="result-light"><strong>404</strong></td>
+                                        <td class="result-light"><i>The resource you were trying to reach is not found</i></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -147,7 +150,6 @@
 
             <section class="content-code" id="content-size2">
                 <div class="container-code">
-                    <h1><strong class="light">Example Value | Model </strong></h1>
                     <pre class="scroller">
                         <code class="json">
 Example Value | Model
@@ -200,15 +202,15 @@ Example Value | Model
                             </thead>
                             <tbody>
                             <tr>
-                                <td><strong>email<sup>*required</sup></strong></td>
-                                <td>Email registered in the system that will be used to request token for password reset</td>
+                                <td class="result-light"><strong>email<sup>*required</sup></strong></td>
+                                <td class="result-light">Email registered in the system that will be used to request token for password reset</td>
                             </tr>
                             <tr>
-                                <td><strong>string</strong></td>
+                                <td class="result-light"><strong>string</strong></td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <td><strong><i>(path)</i></strong></td>
+                                <td class="result-light"><strong><i>(path)</i></strong></td>
                                 <td></td>
                             </tr>
                         </tbody>
@@ -225,29 +227,29 @@ Example Value | Model
                         </tr>
                     </thead>
                         <tbody>
-                        <tr class="success">
-                            <td><strong>200</strong></td>
-                            <td><i>Successfully retrieved object</i></td>
+                        <tr>
+                            <td class="result"><strong>200</strong></td>
+                            <td class="result"><i>Successfully retrieved object</i></td>
                         </tr>
 
-                        <tr class="not">
-                            <td><strong>201</strong></td>
-                            <td><i>Created</i></td>
+                        <tr>
+                            <td class="result-light"><strong>201</strong></td>
+                            <td class="result-light"><i>Created</i></td>
                         </tr>
 
-                        <tr class="forbidden">
-                            <td><strong>401</strong></td>
-                            <td><i>You are not authorized to view the resource</i></td>
+                        <tr>
+                            <td class="result"><strong>401</strong></td>
+                            <td class="result"><i>You are not authorized to view the resource</i></td>
                         </tr>
 
-                        <tr class="found">
-                            <td><strong>403</strong></td>
-                            <td><i>Accessing the resource you were trying to reach is forbidden</i></td>
+                        <tr>
+                            <td class="result-light"><strong>403</strong></td>
+                            <td class="result-light"><i>Accessing the resource you were trying to reach is forbidden</i></td>
                         </tr>
 
-                        <tr class="found">
-                            <td><strong>404</strong></td>
-                            <td><i>The resource you were trying to reach is not found</i></td>
+                        <tr>
+                            <td class="result"><strong>404</strong></td>
+                            <td class="result"><i>The resource you were trying to reach is not found</i></td>
                         </tr>
                         </tbody>
                 </table>
@@ -290,11 +292,11 @@ Example Value | Model
                 </thead>
                 <tbody>
                 <tr>
-                    <td><strong>Simulation<sup>*required</sup></strong></td>
-                    <td>Simulation object store in database table</td>
+                    <td class="result-light"><strong>Simulation<sup>*required</sup></strong></td>
+                    <td class="result-light">Simulation object store in database table</td>
                 </tr>
                 <tr>
-                    <td><strong><i>(body)</i></strong></td>
+                    <td class="result-light"><strong><i>(body)</i></strong></td>
                     <td></td>
                 </tr>
                 </tbody>
@@ -312,29 +314,29 @@ Example Value | Model
                 </tr>
                 </thead>
                 <tbody>
-                <tr class="success">
-                    <td><strong>200</strong></td>
-                    <td><i>OK</i></td>
+                <tr>
+                    <td class="result"><strong>200</strong></td>
+                    <td class="result"><i>OK</i></td>
                 </tr>
 
-                <tr class="not">
-                    <td><strong>401</strong></td>
-                    <td><i>You are not authorized to view the resource</i></td>
+                <tr>
+                    <td class="result-light"><strong>401</strong></td>
+                    <td class="result-light"><i>You are not authorized to view the resource</i></td>
                 </tr>
 
-                <tr class="forbidden">
-                    <td><strong>403</strong></td>
-                    <td><i>Simulation persisted in the database</i></td>
+                <tr>
+                    <td class="result"><strong>403</strong></td>
+                    <td class="result"><i>Simulation persisted in the database</i></td>
                 </tr>
 
-                <tr class="found">
-                    <td><strong>403</strong></td>
-                    <td><i>Accessing the resource you were trying to reach is forbidden</i></td>
+                <tr>
+                    <td class="result-light"><strong>403</strong></td>
+                    <td class="result-light"><i>Accessing the resource you were trying to reach is forbidden</i></td>
                 </tr>
 
-                <tr class="found">
-                    <td><strong>404</strong></td>
-                    <td><i>The resource you were trying to reach is not found</i></td>
+                <tr>
+                    <td class="result"><strong>404</strong></td>
+                    <td class="result"><i>The resource you were trying to reach is not found</i></td>
                 </tr>
                 </tbody>
             </table>
@@ -494,11 +496,11 @@ Example Value | Model
                         </thead>
                         <tbody>
                         <tr>
-                            <td><strong>tokenDto<sup>*required</sup></strong></td>
-                            <td>Token request object</td>
+                            <td class="result-light"><strong>tokenDto<sup>*required</sup></strong></td>
+                            <td class="result-light">Token request object</td>
                         </tr>
                         <tr>
-                            <td><strong><i>(body)</i></strong></td>
+                            <td class="result-light"><strong><i>(body)</i></strong></td>
                             <td></td>
                         </tr>
                         </tbody>
@@ -515,29 +517,29 @@ Example Value | Model
                         </tr>
                         </thead>
                         <tbody>
-                        <tr class="success">
-                            <td><strong>200</strong></td>
-                            <td><i>OK</i></td>
+                        <tr>
+                            <td class="result"><strong>200</strong></td>
+                            <td class="result"><i>OK</i></td>
                         </tr>
 
-                        <tr class="not">
-                            <td><strong>201</strong></td>
-                            <td><i>Created</i></td>
+                        <tr>
+                            <td class="result-light"><strong>201</strong></td>
+                            <td class="result-light"><i>Created</i></td>
                         </tr>
 
-                        <tr class="forbidden">
-                            <td><strong>401</strong></td>
-                            <td><i>Unauthorized</i></td>
+                        <tr>
+                            <td class="result"><strong>401</strong></td>
+                            <td class="result"><i>Unauthorized</i></td>
                         </tr>
 
-                        <tr class="found">
-                            <td><strong>403</strong></td>
-                            <td><i>Forbidden</i></td>
+                        <tr>
+                            <td class="result-light"><strong>403</strong></td>
+                            <td class="result-light"><i>Forbidden</i></td>
                         </tr>
 
-                        <tr class="found">
-                            <td><strong>404</strong></td>
-                            <td><i>Not Found</i></td>
+                        <tr>
+                            <td class="result"><strong>404</strong></td>
+                            <td class="result"><i>Not Found</i></td>
                         </tr>
                         </tbody>
                     </table>
@@ -577,190 +579,181 @@ Example Value | Model
                 </div>
             </section>
 
+    </div>
 
 
-        </div> <!--Fim div Tokens-->
 
 
-
-        <div class="overflow-hidden content-section" id="content-post">
-            <section class="content-text" id="content-size">
-                <div class="table-content">
-                    <h1><strong>Tokens</strong> <small>Management the validation token</small></h1>
-                    <p>Checks if pin code is valid:<br>
-                        <button class="get">GET</button>
-                        <code class="higlighted break-word">/external/2fa/{id}/{type}/{token}</code>
-                    </p>
-                    <h4>PARAMETERS</h4>
-                    <table class="central-overflow-x">
-                        <thead>
-                        <tr>
-                            <th><strong>Name</strong></th>
-                            <th><strong>Description</strong></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td><strong>id<sup>*required</sup></strong></td>
-                            <td>id</td>
-                        </tr>
-                        <tr>
-                            <td><strong>integer($int32)</strong></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><strong><i>(path)</i></strong></td>
-                            <td></td>
-                        </tr>
-
-
-                        <tr>
-                            <td><strong>token<sup>*required</sup></strong></td>
-                            <td>token</td>
-                        </tr>
-                        <tr>
-                            <td><strong>string</strong></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><strong><i>(path)</i></strong></td>
-                            <td></td>
-                        </tr>
+        <div class="overflow-hidden content-section-none" id="content-post-token-none">
+        <section class="content-text" id="content-size-token-none">
+            <div class="table-content">
+                <h1><strong>Tokens</strong> <small>Management the validation token</small></h1>
+                <p>Checks if pin code is valid:<br>
+                    <button class="get">GET</button>
+                    <code class="higlighted break-word">/external/2fa/{id}/{type}/{token}</code>
+                </p>
+                <h4>PARAMETERS</h4>
+                <table class="central-overflow-x">
+                    <thead>
+                    <tr>
+                        <th><strong>Name</strong></th>
+                        <th><strong>Description</strong></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="result-light"><strong>id<sup>*required</sup></strong></td>
+                        <td class="result-light">id</td>
+                    </tr>
+                    <tr>
+                        <td class="result-light"><strong>integer($int32)</strong></td>
+                        <td class="result-light"></td>
+                    </tr>
+                    <tr>
+                        <td class="result-light"><strong><i>(path)</i></strong></td>
+                        <td class="result-light"></td>
+                    </tr>
+                    </tbody>
+                </table>
 
 
-                        <tr>
-                            <td><strong>type<sup>*required</sup></strong></td>
-                            <td>type</td>
-                        </tr>
-                        <tr>
-                            <td><strong>string</strong></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><strong><i>(path)</i></strong></td>
-                            <td>Available values : USER, LEAD, PARTNER</td>
-                        </tr>
+                <table class="central-overflow-x">
+                    <thead>
+                    <tr>
+                        <th><strong>Name</strong></th>
+                        <th><strong>Description</strong></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="result-light"><strong>token<sup>*required</sup></strong></td>
+                        <td class="result-light">token</td>
+                    </tr>
+                    <tr>
+                        <td class="result-light"><strong>string</strong></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="result-light"><strong><i>(path)</i></strong></td>
+                        <td></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+                <table class="central-overflow-x">
+                    <thead>
+                    <tr>
+                        <th><strong>Name</strong></th>
+                        <th><strong>Description</strong></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="result-light"><strong>type<sup>*required</sup></strong></td>
+                        <td class="result-light">type</td>
+                    </tr>
+                    <tr>
+                        <td class="result-light"><strong>string</strong></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="result-light"><strong><i>(path)</i></strong></td>
+                        <td class="result-light">Available values : USER, LEAD, PARTNER</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <h4>RESPONSES</h4>
 
 
-                        <tr>
-                            <td><strong>email<sup>*required</sup></strong></td>
-                            <td>Email registered in the system that will be used to request token for password reset</td>
-                        </tr>
-                        <tr>
-                            <td><strong>string</strong></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><strong><i>(path)</i></strong></td>
-                            <td></td>
-                        </tr>
-                        </tbody>
-                    </table>
+                <table class="central-overflow-x">
+                    <thead>
+                    <tr>
+                        <th><strong>Code</strong></th>
+                        <th><strong>Descriptio</strong>n</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="success">
+                        <td class="result"><strong>200</strong></td>
+                        <td class="result"><i>Successfully retrieved object</i></td>
+                    </tr>
 
-                    <h4>RESPONSES</h4>
+                    <tr>
+                        <td class="result-light"><strong>201</strong></td>
+                        <td class="result-light"><i>Created</i></td>
+                    </tr>
 
+                    <tr>
+                        <td class="result"><strong>401</strong></td>
+                        <td class="result"><i>You are not authorized to view the resource</i></td>
+                    </tr>
 
-                    <table class="central-overflow-x">
-                        <thead>
-                        <tr>
-                            <th><strong>Code</strong></th>
-                            <th><strong>Descriptio</strong>n</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr class="success">
-                            <td><strong>200</strong></td>
-                            <td><i>Successfully retrieved object</i></td>
-                        </tr>
+                    <tr>
+                        <td class="result-light"><strong>403</strong></td>
+                        <td class="result-light"><i>Accessing the resource you were trying to reach is forbidden</i></td>
+                    </tr>
 
-                        <tr class="not">
-                            <td><strong>201</strong></td>
-                            <td><i>Created</i></td>
-                        </tr>
+                    <tr>
+                        <td class="result"><strong>404</strong></td>
+                        <td class="result"><i>The resource you were trying to reach is not found</i></td>
+                    </tr>
+                    </tbody>
+                </table>
 
-                        <tr class="forbidden">
-                            <td><strong>401</strong></td>
-                            <td><i>You are not authorized to view the resource</i></td>
-                        </tr>
+            </div> <!--Fim div Tokens-->
+        </section>
 
-                        <tr class="found">
-                            <td><strong>403</strong></td>
-                            <td><i>Accessing the resource you were trying to reach is forbidden</i></td>
-                        </tr>
-
-                        <tr class="found">
-                            <td><strong>404</strong></td>
-                            <td><i>The resource you were trying to reach is not found</i></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-            </section>
-
-
-            <section class="content-code" id="content-code">
-                <div class="container-code">
+        <section class="content-code-none" id="content-code-token-none">
+            <div class="container-code">
                     <pre>
                         <code class="json">
                         </code>
                     </pre>
-                </div>
-            </section>
-
-
-
-        </div> <!--Fim div Tokens-->
-
-
-        <div class="overflow-hidden content-section" id="content-model-address">
-            <section class="content-text" id="model-address">
-                <div class="table-content">
-                    <h1><strong>Tokens</strong> <small>Management the validation token</small></h1>
-
-                    <table class="central-overflow-x">
-                        <thead>
-                        <tr>
-                            <th><strong>Code</strong></th>
-                            <th><strong>Descriptio</strong>n</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr class="success">
-                            <td><strong>200</strong></td>
-                            <td><i>Successfully retrieved object</i></td>
-                        </tr>
-
-                        <tr class="not">
-                            <td><strong>201</strong></td>
-                            <td><i>Created</i></td>
-                        </tr>
-
-                        <tr class="forbidden">
-                            <td><strong>401</strong></td>
-                            <td><i>You are not authorized to view the resource</i></td>
-                        </tr>
-
-                        <tr class="found">
-                            <td><strong>403</strong></td>
-                            <td><i>Accessing the resource you were trying to reach is forbidden</i></td>
-                        </tr>
-
-                        <tr class="found">
-                            <td><strong>404</strong></td>
-                            <td><i>The resource you were trying to reach is not found</i></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-            </section>
-
-        </div> <!--Fim div adress-->
-
-
+            </div>
+        </section>
     </div>
 </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="js/script.js"></script>
+<script>
+
+    let windowHeight = $(window).height();
+    let windowWidth = $(window).width();
+    let conteTextHeight =$('.content-section-none').height();
+    console.log(windowWidth)
+    $(function (){
+        if(windowWidth >= 1202){
+            $('.content-section').height(windowHeight)
+            $('.content-text').height(windowHeight)
+            $('.content-code').height(windowHeight)
+            $('#content-code-token-none').height(conteTextHeight)
+        }
+
+
+    });
+
+    $(window).ready(function(){
+        windowHeight = -windowHeight;
+        $('#content-partner').click(function() {
+            $('html, body').animate({scrollTop:$('#content-get-partner').position().top}, 500);
+        })
+
+        $('#content-password').click(function() {
+            $('html, body').animate({scrollTop:$('#content-post-password').position().top}, 500);
+        });
+
+        $('#content-simulation').click(function() {
+            $('html, body').animate({scrollTop:$('#content-post-simulation').position().top}, 500);
+        });
+
+        $('#content-token').click(function() {
+            $('html, body').animate({scrollTop:$('#content-post-token').position().top}, 500);
+        });
+    });
+
+</script>
 </body>
 </html>

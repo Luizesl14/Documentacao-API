@@ -92,15 +92,7 @@ window.addEventListener('scroll', function (e) {
 });
 
 
-var contextHeight = window.innerHeight;
 
-document.getElementById('content-code-password').style.height = contextHeight + 'px';
-document.getElementById('content-code-token').style.height = contextHeight + 'px';
-document.getElementById('content-code').style.height = (contextHeight + 300) + 'px' ;
-
-document.getElementById('content-get-password').style.height = contextHeight + 'px';
-document.getElementById('content-get-token').style.height = contextHeight + 'px';
-document.getElementById('content-get').style.height = (contextHeight + 300) + 'px' ;
 
 
 
