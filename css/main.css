@@ -181,6 +181,26 @@ pre{
     color: #012e59;
     border-radius: 30px;
 }
+.a-link{
+    text-decoration: none;
+    text-align: center;
+    color: #82b6e3;
+    font-size: 12px;
+    display: block;
+    cursor: pointer;
+}
+.a-link:hover{
+    text-decoration: none;
+    text-align: center;
+    color: #82b6e3;
+    font-size: 12px;
+    display: block;
+    cursor: pointer;
+}
+.content-credits{
+    position: relative;
+    top: 13rem;
+}
 
 @media (hover: none) {
     .content-menu ul li:not(.active):hover {
@@ -273,14 +293,14 @@ pre{
 /* burger-menu-icon
 ----------------------------------------------------------------------------------------*/
 .burger-menu-icon {
-    background-color: transparent;
     border: none;
     cursor: pointer;
-    padding: 0;
     position: relative;
     display: none;
     background-color:#034c8f ;
     border-radius: 50px;
+    width: 60px;
+    height: 60px;
     padding: 5px;
 }
 
@@ -340,6 +360,7 @@ table {
     table {
         width: 100%;
     }
+
 }
 
 @media only screen and (max-width:800px){
@@ -447,6 +468,12 @@ table {
     .table-content{
         width: 95%;
     }
+
+    .content-credits{
+        position: relative;
+        top: 9rem;
+    }
+
 
 }
 
@@ -606,6 +633,7 @@ sup{
     .container-code-none{
         height: 120px;
     }
+
 }
 
 

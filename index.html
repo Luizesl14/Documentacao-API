@@ -64,14 +64,20 @@
                 <a>Tokens</a>
             </li>
 
-            <li class="scroll-to-link">
+            <li class="scroll-to-link" id="content-model">
                 <a class="link">Models</a>
             </li>
+
+            <ul class="content-credits">
+                <a class="a-link" href="https://crediblue.info/swagger-ui.html#/">Crediblue-info</a>
+                <a class="a-link" href="http://bluetechno.com.br/">bluetechno.com.br</a>
+            </ul>
         </ul>
 
         </br>
 
         </div>
+
     </div>
 </div>
 
@@ -750,6 +756,10 @@ Example Value | Model
         $('#content-token').click(function() {
             $('html, body').animate({scrollTop:$('#content-post-token').position().top}, 500);
         });
+
+        $('#content-model').click(function() {
+            window.location.href = 'model.html'
+        })
     });
 
 </script>
