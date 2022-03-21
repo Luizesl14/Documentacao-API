@@ -107,16 +107,10 @@
                             </thead>
                             <tbody>
                             <tr>
-                                <td class="result-light"><strong>cpfCnpj<sup>*required</sup></strong></td>
+                                <td class="result-light"><strong>cpfCnpj<sup>*required</sup></strong>
+                                <p><i>string</i> <i>(path)</i></p>
+                            </td>
                                 <td class="result-light">Partner CPF/ CNPJ from which partner object will retrieve</td>
-                            </tr>
-                            <tr>
-                                <td class="result-light"><strong>string</strong></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="result-light"><strong><i>(path)</i></strong></td>
-                                <td></td>
                             </tr>
 
                             </tbody>
@@ -160,7 +154,7 @@
                 <div class="container-code">
                     <pre class="scroller">
                         <code class="json">
-Example Value | Model
+Example Response | Model
 {
 "contacts": [
     {
@@ -210,16 +204,10 @@ Example Value | Model
                             </thead>
                             <tbody>
                             <tr>
-                                <td class="result-light"><strong>email<sup>*required</sup></strong></td>
+                                <td class="result-light"><strong>email<sup>*required</sup></strong>
+                                    <p><i>string</i> <i>(path)</i></p>
+                                </td>
                                 <td class="result-light">Email registered in the system that will be used to request token for password reset</td>
-                            </tr>
-                            <tr>
-                                <td class="result-light"><strong>string</strong></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="result-light"><strong><i>(path)</i></strong></td>
-                                <td></td>
                             </tr>
                         </tbody>
                     </table>
@@ -269,7 +257,7 @@ Example Value | Model
                 <div class="container-code">
                     <pre>
                         <code class="json">
-    Example Value | Model
+    Example Response | Model
    {
       "mensagemDev": "string",
       "mensagemUsuario": "string"
@@ -300,12 +288,10 @@ Example Value | Model
                 </thead>
                 <tbody>
                 <tr>
-                    <td class="result-light"><strong>Simulation<sup>*required</sup></strong></td>
+                    <td class="result-light"><strong>Simulation<sup>*required</sup></strong>
+                        <p><i>(body)</i></p>
+                    </td>
                     <td class="result-light">Simulation object store in database table</td>
-                </tr>
-                <tr>
-                    <td class="result-light"><strong><i>(body)</i></strong></td>
-                    <td></td>
                 </tr>
                 </tbody>
             </table>
@@ -355,7 +341,7 @@ Example Value | Model
             <div class="container-code">
                     <pre>
                         <code class="json">
-    Example Request | Model
+    Example Value | Model
    {
   "amortizationType": "PRICE",
   "installmentsAmount": 0,
@@ -504,12 +490,10 @@ Example Value | Model
                         </thead>
                         <tbody>
                         <tr>
-                            <td class="result-light"><strong>tokenDto<sup>*required</sup></strong></td>
+                            <td class="result-light"><strong>tokenDto<sup>*required</sup></strong>
+                                <p><i>(body)</i></p>
+                            </td>
                             <td class="result-light">Token request object</td>
-                        </tr>
-                        <tr>
-                            <td class="result-light"><strong><i>(body)</i></strong></td>
-                            <td></td>
                         </tr>
                         </tbody>
                     </table>
@@ -560,7 +544,7 @@ Example Value | Model
                 <div class="container-code">
                     <pre>
                         <code class="json">
-    Example Request | Model
+    Example Value | Model
     {
       "id": 0,
       "sendBy": "string",
@@ -610,17 +594,11 @@ Example Value | Model
                     </thead>
                     <tbody>
                     <tr>
-                        <td class="result-light"><strong>id<sup>*required</sup></strong></td>
+                        <td class="result-light"><strong>id<sup>*required</sup></strong>
+                            <p><i>integer($int32)</i><i>(path)</i></p>
+                        </td>
                         <td class="result-light">id</td>
                     </tr>
-                    <tr>
-                        <td class="result-light"><strong>integer($int32)</strong></td>
-                        <td class="result-light"></td>
-                    </tr>
-                    <tr>
-                        <td class="result-light"><strong><i>(path)</i></strong></td>
-                        <td class="result-light"></td>
-                    </tr>
                     </tbody>
                 </table>
 
@@ -634,17 +612,11 @@ Example Value | Model
                     </thead>
                     <tbody>
                     <tr>
-                        <td class="result-light"><strong>token<sup>*required</sup></strong></td>
+                        <td class="result-light"><strong>token<sup>*required</sup></strong>
+                            <p><i>integer($int32)</i><i>(path)</i></p>
+                        </td>
                         <td class="result-light">token</td>
                     </tr>
-                    <tr>
-                        <td class="result-light"><strong>string</strong></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="result-light"><strong><i>(path)</i></strong></td>
-                        <td></td>
-                    </tr>
 
                     </tbody>
                 </table>
@@ -658,16 +630,13 @@ Example Value | Model
                     </thead>
                     <tbody>
                     <tr>
-                        <td class="result-light"><strong>type<sup>*required</sup></strong></td>
-                        <td class="result-light">type</td>
-                    </tr>
-                    <tr>
-                        <td class="result-light"><strong>string</strong></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="result-light"><strong><i>(path)</i></strong></td>
-                        <td class="result-light">Available values : USER, LEAD, PARTNER</td>
+                        <td class="result-light"><strong>type<sup>*required</sup></strong>
+                            <p><i>string</i><i>(path)</i></p>
+                        </td>
+                        <td class="result-light">type
+                            <p></p>
+                            <p><i></i><i>Available values : USER, LEAD, PARTNER</i></p>
+                        </td>
                     </tr>
                     </tbody>
                 </table>
