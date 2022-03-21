@@ -185,6 +185,7 @@ i{
     border-radius: 30px;
 }
 .a-link{
+    margin-top: 8px;
     text-decoration: none;
     text-align: center;
     color: #82b6e3;
@@ -199,10 +200,6 @@ i{
     font-size: 12px;
     display: block;
     cursor: pointer;
-}
-.content-credits{
-    position: relative;
-    top: 9rem;
 }
 
 @media (hover: none) {
@@ -363,13 +360,6 @@ table {
     table {
         width: 100%;
     }
-
-    .content-credits{
-        position: relative;
-        top: 9rem;
-    }
-
-
 }
 
 @media only screen and (max-width:800px){
@@ -477,12 +467,6 @@ table {
     .table-content{
         width: 95%;
     }
-
-    .content-credits{
-        position: relative;
-        top: 9rem;
-    }
-
 
 }
 
@@ -620,11 +604,6 @@ sup{
         width: 100%;
     }
 
-    .content-credits{
-        position: relative;
-        top: 12rem;
-    }
-
 }
 
 
@@ -729,8 +708,7 @@ code::-webkit-scrollbar-thumb {
 }
 
 .content-credits{
-    position: relative;
-    top: 26rem;
+   margin-bottom: 50px;
 }
 
 
