@@ -711,4 +711,18 @@ code::-webkit-scrollbar-thumb {
    margin-bottom: 50px;
 }
 
+.menu-bottom {
+    margin-top: 67%;
+
+
+}
+
+.p-bottom{
+    font-size: 12px;
+    text-align: center;
+    color: #9ac4ec;
+    margin-top: -10px;
+}
+
+
 
