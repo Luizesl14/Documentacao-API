@@ -490,62 +490,81 @@ Example Response | Model
                     <pre>
                         <code class="json">
     Example Response | Model
-   {
-  "amortizationType": "PRICE",
-  "installmentsAmount": 0,
-  "lead": {
-    "address": {
-      "cep": "string",
-      "city": "string",
-      "complement": "string",
-      "country": "string",
-      "location": {
-        "lat": "string",
-        "lng": "string"
-      },
-      "neighborhood": "string",
-      "number": "string",
-      "street": "string",
-      "uf": "AC"
+  {
+    "id": 0,
+    "persona": {
+        "id": 0,
+        "name": "string",
+        "taxId": "string",
+        "personaType": "NATURAL_PERSON",
+        "genderType": "MALE",
+        "rg": "string",
+        "orgaoEmissor": "string",
+        "maritalStatus": "SOLTEIRO",
+        "nationality": "string",
+        "citizenship": "string",
+        "birthDate": "string",
+        "motherName": "string",
+        "sourceIncome": "string",
+        "phones": [
+            {
+                "id": 0,
+                "phone": {
+                    "id": 0,
+                    "number": "string",
+                    "isWhatsApp": false
+                },
+                "type": "COMMERCIAL",
+                "principal": true,
+                "createdAt": "string"
+            }
+        ],
+        "bankAccounts": [],
+        "companion": null,
+        "composeIncomes": [],
+        "contacts": [
+            {
+                "id": 0,
+                "email": "string",
+                "type": "PERSONAL",
+                "principal": true,
+                "createdAt": "string"
+            }
+        ],
+        "occupation": null,
+        "pep": null,
+        "createdAt": "string",
+        "updatedAt": null,
+        "deletedAt": null,
+        "naturalPerson": true
     },
-    "birthDate": "string",
-    "cpfCnpj": "string",
-    "email": "string",
-    "familyIncome": 0,
-    "maritalStatus": "CASADO",
-    "name": "string",
-    "spouseName": "string",
-    "telephone": "string"
-  },
-  "leadSourceIncome": "string",
-  "loanAmount": 0,
-  "loanObjective": "QUITAR_DIVIDA",
-  "operationType": "HOME_EQUITY",
-  "property": {
-    "address": {
-      "cep": "string",
-      "city": "string",
-      "complement": "string",
-      "country": "string",
-      "location": {
-        "lat": "string",
-        "lng": "string"
-      },
-      "neighborhood": "string",
-      "number": "string",
-      "street": "string",
-      "uf": "AC"
+    "leadCorporateType": null,
+    "operationType": "HOME_EQUITY",
+    "propertyValue": 190000,
+    "amortizationType": "PRICE",
+    "loanAmount": 3005645.64,
+    "guaranteePropertyAddress": {
+        "id": 11718,
+        "street": "string",
+        "neighborhood": "string",
+        "number": "string",
+        "complement": "string",
+        "cep": "string",
+        "city": "stringo",
+        "uf": "string",
+        "country": "string",
+        "location": string,
+        "ibge": "string"
     },
-    "balanceDue": 0,
-    "bathroomsQuantity": 0,
-    "buildingType": "APARTMENT",
-    "parkingLotQuantity": 0,
-    "privateArea": 0,
-    "propertyType": "FLAT",
-    "propertyValue": 0,
-    "roomsQuantity": 0,
-    "suitesQuantity": 0
-  }
+    "propertyType": "PLOT_OF_LAND",
+    "buildingType": "PLOT_OF_LAND",
+    "privateArea": 100.0,
+    "leadSourceIncome": "AUTONOMO",
+    "balanceDue": null,
+    "loanObjective": "PROPERTY_FINANCING",
+    "partnerId": 0,
+    "installmentsAmount": 0,
+    "status": null
 }
                         </code>
                     </pre>
