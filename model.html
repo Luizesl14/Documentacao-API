@@ -53,12 +53,21 @@
                 <li class="scroll-to-link " id="content-address">
                     <a>Address</a>
                 </li>
-                <li class="scroll-to-link" id="content-contact">
-                    <a>Contact</a>
+
+                <li class="scroll-to-link " id="content-persona">
+                    <a>Persona</a>
                 </li>
 
-                <li class="scroll-to-link " id="content-lead">
-                    <a>Lead</a>
+                <li class="scroll-to-link " id="content-contacts">
+                    <a>Contacts</a>
+                </li>
+
+                <li class="scroll-to-link " id="content-phones">
+                    <a>Phones</a>
+                </li>
+
+                <li class="scroll-to-link " id="content-phone">
+                    <a>Phone</a>
                 </li>
 
                 <li class="scroll-to-link" id="content-location">
@@ -68,16 +77,13 @@
                 <li class="scroll-to-link " id="content-message">
                     <a>Message</a>
                 </li>
-                <li class="scroll-to-link" id="content-partner">
-                    <a>Parnter</a>
-                </li>
-
-                <li class="scroll-to-link " id="content-property">
-                    <a>Property</a>
-                </li>
 
                 <li class="scroll-to-link" id="content-simulation">
                     <a>Simulation</a>
+                </li>
+
+                <li class="scroll-to-link" id="content-property">
+                    <a>Property</a>
                 </li>
 
                 <li class="scroll-to-link " id="content-token">
@@ -120,11 +126,11 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <th scope="row">cep</th>
+                            <th scope="row">cep <sup>*required</sup></th>
                             <td><i>string</i></td>
                         </tr>
                         <tr>
-                            <th scope="row">city</th>
+                            <th scope="row">city <sup>*required</sup></th>
                             <td><i>string</i></td>
                         </tr>
                         <tr>
@@ -132,270 +138,304 @@
                             <td><i>string</i></td>
                         </tr>
                         <tr>
-                            <th scope="row">country</th>
+                            <th scope="row">country <sup>*required</sup></th>
                             <td><i>string</i></td>
                         </tr>
                         <tr>
-                            <th scope="row"><strong>Location</strong></th>
+                            <th scope="row"><strong>Location <sup>*required</sup></strong></th>
                             <td><i>Object(Location)</i></td>
                         </tr>
 
                         <tr>
-                            <th scope="row">neighborhood</th>
+                            <th scope="row">neighborhood <sup>*required</sup></th>
                             <td><i>string</i></td>
                         </tr>
 
                         <tr>
-                            <th scope="row">number</th>
+                            <th scope="row">number <sup>*required</sup></th>
                             <td><i>string</i></td>
                         </tr>
 
                         <tr>
-                            <th scope="row">street</th>
+                            <th scope="row">street <sup>*required</sup></th>
                             <td><i>string</i></td>
                         </tr>
 
                         <tr>
-                            <th scope="row">uf</th>
-                            <td><i>Enum(string)</i></td>
-                        </tr>
-                        <tr>
-                            <th scope="row"></th>
-                            <td><i>Array [ 27 ]</i>
-                            <p>[ AC, AL, AM, AP, BA, CE, DF, ES, GO, MA, MG, MS, MT, PA,
-                                PB, PE, PI, PR, RJ, RN, RO, RR, RS, SC, SE, SP, TO ]</p></td>
+                            <th scope="row">uf <sup>*required</sup></th>
+                            <td><i>Enum(string)</i>
+                                <p>[ AC, AL, AM, AP, BA, CE, DF, ES, GO, MA, MG, MS, MT, PA,
+                                    PB, PE, PI, PR, RJ, RN, RO, RR, RS, SC, SE, SP, TO ]</p>
+                            </td>
                         </tr>
                         </tbody>
                     </table>
             </section>
-        </div> <!--Fim div adress-->
+        </div> <!--Fim div address-->
 
 
-        <div class="overflow-hidden content-section" id="content-model-contact">
-            <section class="content-text" id="model-contact">
-                <h1><strong>Model Contact</strong> </h1>
+        <div class="overflow-hidden content-section" id="content-model-persona">
+            <section class="content-text" id="model-persona">
+                <h1><strong>Model Persona</strong> </h1>
                 <table class="table table-hover">
                     <thead>
                     <tr>
                         <th scope="col">Description</th>
-                        <th scope="col">Represents an Contact</th>
+                        <th scope="col">Represents a persona</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <th scope="row">bestContactCanal</th>
-                        <td><i>string</i></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">bestTimeToCall</th>
-                        <td><i>string</i></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">birthDate</th>
-                        <td><i>string</i></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">contactType</th>
-                        <td><i>Enum(string)</i></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"></th>
-                        <td><i>Array [ 2 ]</i>
-                            <p>[ LEGAL_REPRESENTATIVE, INTERNAL_CONTACT ]</p></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">cpf</th>
-                        <td><i>string</i></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">email</th>
-                        <td><i>string</i></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">facebook</th>
-                        <td><i>string</i></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">gender</th>
-                        <td><i>string</i></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"></th>
-                        <td><i>Array [ 2 ]</i>
-                            <p>[ M, F ]</p></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">id</th>
-                        <td><i>integer($int32)</i></td>
-                    </tr>
 
                     <tr>
-                        <th scope="row">number</th>
+                        <th scope="row">name <sup>*required</sup></th>
                         <td><i>string</i></td>
                     </tr>
 
                     <tr>
-                        <th scope="row">instagram</th>
+                        <th scope="row">taxId <sup>*required</sup></th>
+                        <td><i>string(CPF/CNPJ)</i></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">personaType <sup>*required</sup></th>
+                        <td><i>Enum(string)</i>
+                            <p>[ LEGAL_PERSON , NATURAL_PERSON ]</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">genderType <sup>*required</sup></th>
+                        <td><i>Enum(string)</i>
+                            <p>[ MALE , FEMALE , OTHERS ]</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">rg <sup>*required</sup></th>
                         <td><i>string</i></td>
                     </tr>
 
                     <tr>
-                        <th scope="row">linkedin</th>
-                        <td><i>string</i></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">name</th>
-                        <td><i>string</i></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">role</th>
-                        <td><i>string</i></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">telephone</th>
-                        <td><i>string</i></td>
-                    </tr>
-
-                    </tbody>
-                </table>
-            </section>
-        </div> <!--Fim div contact-->
-
-
-        <div class="overflow-hidden content-section" id="content-model-lead">
-            <section class="content-text" id="model-lead">
-                <h1><strong>Model Lead</strong> </h1>
-                <table class="table table-hover">
-                    <thead>
-                    <tr>
-                        <th scope="col">Description</th>
-                        <th scope="col">Represents a simulation</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row"><strong>Address</strong></th>
-                        <td></td>
-                    <tr>
-                        <th scope="row">cep</th>
-                        <td><i>string</i></td>
-                    </tr>
-                    <tr>
-                        <th>city</th>
+                        <th scope="row">orgaoEmissor <sup>*required</sup></th>
                         <td><i>string</i></td>
                     </tr>
 
                     <tr>
-                        <th scope="row">complement</th>
+                        <th scope="row">maritalStatus <sup>*required</sup></th>
+                        <td><i>Enum(string)</i>
+                            <p>[ CASADO , RELACAO_ESTAVEL , DIVORCIADO , SOLTEIRO , VIUVO, SEPARATE ]</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">nationality <sup>*required</sup></th>
                         <td><i>string</i></td>
                     </tr>
 
                     <tr>
-                        <th scope="row">country</th>
+                        <th scope="row">citizenship</th>
                         <td><i>string</i></td>
                     </tr>
 
                     <tr>
-                        <th scope="row">neighborhood</th>
-                        <td><i>string</i></td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">number</th>
-                        <td><i>string</i></td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">street</th>
-                        <td><i>string</i></td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">uf</th>
-                        <td><i>string</i></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"></th>
-                        <td><i>Array [ 27 ]</i>
-                            <p>[ AC, AL, AM, AP, BA, CE, DF, ES, GO, MA, MG, MS, MT, PA, PB,
-                                PE, PI, PR, RJ, RN, RO, RR, RS, SC, SE, SP, TO ]</p></td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">Location</th>
-                        <td><i>Object(Location)</i></td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">birthDate</th>
+                        <th scope="row">birthDate <sup>*required</sup></th>
                         <td><i>string($date)</i></td>
                     </tr>
+
                     <tr>
-                        <th scope="row">cpfCnpj</th>
-                        <td><i>string</i></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">email</th>
+                        <th scope="row">motherName</th>
                         <td><i>string</i></td>
                     </tr>
 
                     <tr>
-                        <th scope="row">familyIncome</th>
-                        <td><i>string</i></td>
+                        <th scope="row">LeadSourceIncome <sup>*required</sup></th>
+                        <td><i>Enum(string)</i>
+                            <p>[ ASSALARIADO , EMPRESARIO , AUTONOMO , APOSENTADO_PENSIONISTA ,
+                                FUNCIONARIO_PUBLICO , PRESTADOR_SERVICO , PROFISSIONAL_LIBERAL ,
+                                RENDA_ALUGUEIS , DO_LAR , RURAL_PRODUCER , OUTROS , PRIMARY_SECTOR ,
+                                SECONDARY_SECTOR , TERTIARY_SECTOR ]</p>
+                        </td>
                     </tr>
 
                     <tr>
-                        <th scope="row">maritalStatus</th>
-                        <td><i>Enum(string)</i></td>
+                        <th scope="row">company <sup>*required(CNPJ)</sup></th>
+                        <td><i>Object(Company)</i></td>
                     </tr>
+
                     <tr>
-                        <th scope="row"></th>
-                        <td><i>Array [ 6 ]</i>
-                            <p>[ CASADO, RELACAO_ESTAVEL, DIVORCIADO, SOLTEIRO, VIUVO, SEPARATE ]</p></td>
+                        <th scope="row">phones <sup>*required (Principal)</sup></th>
+                        <td><i>List [ Object(phones) ]</i></td>
                     </tr>
+
                     <tr>
-                        <th scope="row">name</th>
-                        <td><i>string</i></td>
+                        <th scope="row">contacts <sup>*required (Principal)</sup></th>
+                        <td><i>List [ Object(contacts) ]</i></td>
                     </tr>
+
                     <tr>
-                        <th scope="row">spouseName</th>
-                        <td><i>string</i></td>
+                        <th scope="row">pep <sup>*required</sup></th>
+                        <td><i>Boolean</i></td>
                     </tr>
-                    <tr>
-                        <th scope="row">telephone</th>
-                        <td><i>string</i></td>
-                    </tr>
+
                     </tbody>
                 </table>
             </section>
         </div> <!--Fim div lead-->
 
 
-        <div class="overflow-hidden content-section" id="content-model-location">
-            <section class="content-text" id="model-location">
-                <h1><strong>Model Location</strong> </h1>
+
+        <div class="overflow-hidden content-section" id="content-model-company">
+            <section class="content-text" id="model-company">
+                <h1><strong>Model Company</strong> </h1>
                 <table class="table table-hover">
                     <thead>
                     <tr>
                         <th scope="col">Description</th>
-                        <th scope="col">Represents a location of an address</th>
+                        <th scope="col">Represents a company</th>
                     </tr>
                     </thead>
                     <tbody>
+
                     <tr>
-                        <th scope="row">lat</th>
-                        <td><i>string</i><p>The latitude of an address</p></td>
+                        <th scope="row">corporateName <sup>*required</sup></th>
+                        <td><i>string</i></td>
                     </tr>
 
                     <tr>
-                        <th scope="row">lng</th>
-                        <td><i>string</i><p>The longitude of an address</p></td>
+                        <th scope="row">fantasyName <sup>*required</sup></th>
+                        <td><i>string</i></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">foundationDate <sup>*required</sup></th>
+                        <td><i>string(Date)</i></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">openingDate</th>
+                        <td><i>string(Date)</i></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">cnae <sup>*required</sup></th>
+                        <td><i>string</i></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">type <sup>*required</sup></th>
+                        <td><i>Enum(string)</i>
+                            <p>[ SA_OPENED , SA_CLOSED , SE_LTDA, SE_CN , SE_CS , SE_CA , SCP , EI , ESE
+                                EEAB , SSP , SS_LTDA , SS_CN , SS_CS , EIRELI_NE , EIRELI_NS ]</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">size <sup>*required</sup></th>
+                        <td><i>Enum(string)</i>
+                            <p>[ EPP , ME , MEDIUM, BIG , MEI ]</p>
+                        </td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+            </section>
+        </div> <!--Fim div company-->
+
+        <div class="overflow-hidden content-section" id="content-model-phone">
+            <section class="content-text" id="model-phone">
+                <h1><strong>Model Phone</strong> </h1>
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">Description</th>
+                        <th scope="col">Represents a phone</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr>
+                        <th scope="row">number <sup>*required</sup></th>
+                        <td><i>string</i></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">isWhatsApp</th>
+                        <td><i>Boolean </i></td>
                     </tr>
 
                     </tbody>
                 </table>
             </section>
-        </div> <!--Fim div Location-->
+        </div> <!--Fim div phone-->
+
+
+        <div class="overflow-hidden content-section" id="content-model-phones">
+            <section class="content-text" id="model-phones">
+                <h1><strong>Model Phones</strong> </h1>
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">Description</th>
+                        <th scope="col">Represents a Company</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr>
+                        <th scope="row">phone <sup>*required</sup></th>
+                        <td><i>Object(phone)</i></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">type <sup>*required</sup></th>
+                        <td><i>Enum(string)</i>
+                            <p>[ COMMERCIAL , PERSONAL ]</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">principal <sup>*required</sup></th>
+                        <td><i>Boolean</i></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </section>
+        </div> <!--Fim div phones-->
+
+
+        <div class="overflow-hidden content-section" id="content-model-contacts">
+            <section class="content-text" id="model-contacts">
+                <h1><strong>Model Contacts</strong> </h1>
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">Description</th>
+                        <th scope="col">Represents a contacts</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr>
+                        <th scope="row">email <sup>*required</sup></th>
+                        <td><i>String</i></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">type <sup>*required</sup></th>
+                        <td><i>Enum(string)</i>
+                            <p>[ CORPORATE , PERSONAL, COMMERCIAL ]</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">principal <sup>*required (Default True)</sup></th>
+                        <td><i>Boolean</i></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </section>
+        </div> <!--Fim div phones-->
+
 
         <div class="overflow-hidden content-section" id="content-model-message">
             <section class="content-text" id="model-message">
@@ -425,50 +465,113 @@
         </div> <!--Fim div Location-->
 
 
-        <div class="overflow-hidden content-section" id="content-model-partner">
-            <section class="content-text" id="model-partner">
-                <h1><strong>Model Partner</strong> </h1>
+
+        <div class="overflow-hidden content-section" id="content-model-simulation">
+            <section class="content-text" id="model-simulation">
+                <h1><strong>Model Simulation</strong> </h1>
                 <table class="table table-hover">
                     <thead>
                     <tr>
                         <th scope="col">Description</th>
-                        <th scope="col">Represents a partner</th>
+                        <th scope="col">Represents a simulations</th>
                     </tr>
                     </thead>
                     <tbody>
 
                     <tr>
-                        <th scope="row">contacts</th>
-                        <td><i>Object(contact)</i></td>
+                        <th scope="row">amortizationType <sup>*required</sup></th>
+                        <td><i>Enum(string)</i>
+                            <p>[ PRICE, SAC ]</p>
+                        </td>
                     </tr>
 
                     <tr>
-                        <th scope="row">email</th>
-                        <td><i>string</i><p>Refers to the partner’s email</p></td>
+                        <th scope="row">operationType <sup>*required</sup></th>
+                        <td><i>Enum(string)</i>
+                            <p>[ HOME_EQUITY, PROPERTY_FINANCING , CONSTRUCTION_CREDIT ]</p>
+                        </td>
                     </tr>
 
                     <tr>
-                        <th scope="row">id</th>
-                        <td><i>integer($int32)</i></td>
+                        <th scope="row">installmentsAmount <sup>*required</sup></th>
+                        <td><i>integer</i></td>
                     </tr>
 
                     <tr>
-                        <th scope="row">name</th>
-                        <td><i>string</i><p>Refers to the partner’s name</p></td>
+                        <th scope="row">Persona <sup>*required</sup></th>
+                        <td><i>Object(Persona)</i></td>
                     </tr>
 
                     <tr>
-                        <th scope="row">telephone</th>
-                        <td><i>string</i><p>Refers to the partner’s telephone</p></td>
+                        <th scope="row">loanAmount <sup>*required</sup></th>
+                        <td><i>number(decimal)</i></td>
                     </tr>
 
+                    <tr>
+                        <th scope="row">familyIncome <sup>*required</sup></th>
+                        <td><i>number(decimal)</i></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">propertyValue <sup>*required</sup></th>
+                        <td><i>number(decimal)</i></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">privateArea</th>
+                        <td><i>Integer</i></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">sameAddressWarrantyHome</th>
+                        <td><i>Integer</i></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">loanObjective <sup>*required</sup></th>
+                        <td><i>Enum(string)</i>
+                            <p>[ QUITAR_DIVIDA, INVESTIMENTO_CAPITAL_GIRO,
+                                REFORMA_CASA, CASA_NOVA, PROPERTY_FINANCING,
+                                CONSTRUCTION_CREDIT, OUTRO ]</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">buildingType <sup>*required</sup></th>
+                        <td><i>Enum(string)</i>
+                            <p>[ APARTMENT , HOUSE , COMMERCIAL , PLOT_OF_LAND ]</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">propertyType <sup>*required</sup></th>
+                        <td><i>Enum(string)</i>
+                            <p>[ FLAT, LOFT, STANDARD_APARTMENT, STUDIO , ROOF, HOUSE, DUPLEX, FARM_HOUSE ,
+                                STORE, COMMERCIAL_ROOM, HANGER, STORE_IN_MALL , COMMERCIAL_HOUSE , PLOT_OF_LAND ,
+                                GARAGE_OR_BOX ]</p>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <th scope="row">operationType <sup>*required</sup></th>
+                        <td><i>Enum(string)</i>
+                            <p>[ HOME_EQUITY, PROPERTY_FINANCING, CONSTRUCTION_CREDIT ]</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">guaranteePropertyAddress <sup>*required</sup></th>
+                        <td><i>Object(Address)</i></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">property</th>
+                        <td><i>Object(Property)</i></td>
+                    </tr>
                     </tbody>
                 </table>
             </section>
-        </div> <!--Fim div partner-->
-
-
-
+        </div> <!--Fim div simulation-->
 
         <div class="overflow-hidden content-section" id="content-model-property">
             <section class="content-text" id="model-property">
@@ -477,7 +580,7 @@
                     <thead>
                     <tr>
                         <th scope="col">Description</th>
-                        <th scope="col">Represents a partner</th>
+                        <th scope="col">Represents a property</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -489,45 +592,39 @@
 
                     <tr>
                         <th scope="row">balanceDue</th>
-                        <td><i>number</i></td>
+                        <td><i>number(float)</i></td>
                     </tr>
 
                     <tr>
                         <th scope="row">bathroomsQuantity</th>
-                        <td><i>integer($int32)</i></td>
+                        <td><i>integer</i></td>
                     </tr>
 
                     <tr>
                         <th scope="row">buildingType</th>
-                        <td><i>Enum(string)</i></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"></th>
-                        <td><i>Array [ 6 ]</i>
-                            <p>[ APARTMENT, HOUSE, COMMERCIAL, PLOT_OF_LAND ]</p></td>
+                        <td><i>Enum(string)</i>
+                            <p>[ APARTMENT, HOUSE, COMMERCIAL, PLOT_OF_LAND ]</p>
+                        </td>
                     </tr>
 
                     <tr>
                         <th scope="row">parkingLotQuantity</th>
-                        <td><i>integer($int32)</i></td>
+                        <td><i>integer</i></td>
                     </tr>
 
                     <tr>
                         <th scope="row">privateArea</th>
-                        <td><i>number($float)</i></td>
+                        <td><i>number(float)</i></td>
                     </tr>
 
                     <tr>
                         <th scope="row">propertyType</th>
-                        <td><i>Enum(string)</i></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"></th>
-                        <td><i>Array [ 6 ]</i>
+                        <td><i>Enum(string)</i>
                             <p>[ FLAT, LOFT, STANDARD_APARTMENT, STUDIO,
                                 ROOF, HOUSE, DUPLEX, FARM_HOUSE, STORE,
                                 COMMERCIAL_ROOM, HANGER, STORE_IN_MALL,
-                                COMMERCIAL_HOUSE, PLOT_OF_LAND ]</p></td>
+                                COMMERCIAL_HOUSE, PLOT_OF_LAND ]</p>
+                        </td>
                     </tr>
 
                     <tr>
@@ -542,186 +639,18 @@
 
                     <tr>
                         <th scope="row">roomsQuantity</th>
-                        <td><i>integer($int32)</i></td>
+                        <td><i>integer</i></td>
                     </tr>
 
                     <tr>
                         <th scope="row">suitesQuantity</th>
-                        <td><i>integer($int32)</i></td>
+                        <td><i>integer</i></td>
                     </tr>
 
                     </tbody>
                 </table>
             </section>
         </div> <!--Fim div property-->
-
-
-
-        <div class="overflow-hidden content-section" id="content-model-simulation">
-            <section class="content-text" id="model-simulation">
-                <h1><strong>Model Simulation</strong> </h1>
-                <table class="table table-hover">
-                    <thead>
-                    <tr>
-                        <th scope="col">Description</th>
-                        <th scope="col">Represents a partner</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-
-                    <tr>
-                        <th scope="row">amortizationType</th>
-                        <td><i>Enum(string)</i></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"></th>
-                        <td><i>Array [ 2 ]</i>
-                            <p>[ PRICE, SAC ]</p></td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">installmentsAmount</th>
-                        <td><i>integer($int32)</i></td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">lead</th>
-                        <td><i>Object(Lead)</i></td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">leadSourceIncome</th>
-                        <td><i>string</i></td>
-                    </tr>
-                    <tr>
-
-                    <tr>
-                        <th scope="row">loanAmount</th>
-                        <td><i>number</i></td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">loanObjective</th>
-                        <td><i>Enum(string)</i></td>
-                    </tr>
-                    <tr>
-                    <th scope="row"></th>
-                    <td><i>Array [ 7 ]</i>
-                        <p>[ QUITAR_DIVIDA, INVESTIMENTO_CAPITAL_GIRO,
-                            REFORMA_CASA, CASA_NOVA, PROPERTY_FINANCING,
-                            CONSTRUCTION_CREDIT, OUTRO ]</p></td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">operationType</th>
-                        <td><i>Enum(string)</i></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"></th>
-                        <td><i>Array [ 3 ]</i>
-                            <p>[ HOME_EQUITY, PROPERTY_FINANCING, CONSTRUCTION_CREDIT ]</p></td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">property</th>
-                        <td><i>Object(Property)</i></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </section>
-        </div> <!--Fim div simulation-->
-
-
-
-        <div class="overflow-hidden content-section" id="content-model-token">
-            <section class="content-text" id="model-token">
-                <h1><strong>Model Token</strong> </h1>
-                <table class="table table-hover">
-                    <thead>
-                    <tr>
-                        <th scope="col">Description</th>
-                        <th scope="col">Represents a partner</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-
-                    <tr>
-                        <th scope="row">entityId</th>
-                        <td><i>integer($int32)</i></td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">entityName</th>
-                        <td><i>Enum(string)</i></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"></th>
-                        <td><i>Array [ 3 ]</i>
-                            <p>[ USER, LEAD, PARTNER ]</p></td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">expired</th>
-                        <td><i>boolean</i></td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">expiryDate</th>
-                        <td><i>string($date-time</i></td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">id</th>
-                        <td><i>integer($int32)</i></td>
-                    </tr>
-                    <tr>
-
-                    <tr>
-                        <th scope="row">token</th>
-                        <td><i>string</i></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </section>
-        </div> <!--Fim div token-->
-
-
-        <div class="overflow-hidden content-section" id="content-model-tokendto">
-            <section class="content-text" id="model-tokendto">
-                <h1><strong>Model TokenDto</strong> </h1>
-                <table class="table table-hover">
-                    <thead>
-                    <tr>
-                        <th scope="col">Description</th>
-                        <th scope="col">Represents a partner</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-
-                    <tr>
-                        <th scope="row">id</th>
-                        <td><i>integer($int32)</i></td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">sendBy</th>
-                        <td><i>string</i></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">type</th>
-                        <td><i>Enum(string)</i></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"></th>
-                        <td><i>Array [ 3 ]</i>
-                            <p>[ USER, LEAD, PARTNER ]</p></td>
-                    </tr>
-
-                    </tbody>
-                </table>
-            </section>
-        </div> <!--Fim div token-->
-
 
     </div>
 </div>
@@ -737,8 +666,20 @@
             $('html, body').animate({scrollTop:$('#content-model-contact').position().top}, 500);
         })
 
-        $('#content-lead').click(function() {
-            $('html, body').animate({scrollTop:$('#content-model-lead').position().top}, 500);
+        $('#content-persona').click(function() {
+            $('html, body').animate({scrollTop:$('#content-model-persona').position().top}, 500);
+        })
+
+        $('#content-phones').click(function() {
+            $('html, body').animate({scrollTop:$('#content-model-phones').position().top}, 500);
+        })
+
+        $('#content-phone').click(function() {
+            $('html, body').animate({scrollTop:$('#content-model-phone').position().top}, 500);
+        })
+
+        $('#content-contacts').click(function() {
+            $('html, body').animate({scrollTop:$('#content-model-contacts').position().top}, 500);
         })
 
         $('#content-location').click(function() {
@@ -761,13 +702,6 @@
             $('html, body').animate({scrollTop:$('#content-model-simulation').position().top}, 500);
         })
 
-        $('#content-token').click(function() {
-            $('html, body').animate({scrollTop:$('#content-model-token').position().top}, 500);
-        })
-
-        $('#content-tokendto').click(function() {
-            $('html, body').animate({scrollTop:$('#content-model-tokendto').position().top}, 500);
-        })
 
         $('#content-home').click(function() {
             window.location.href = 'index.html'
