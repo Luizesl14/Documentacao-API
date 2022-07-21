@@ -58,24 +58,20 @@
                     <a>Persona</a>
                 </li>
 
-                <li class="scroll-to-link " id="content-contacts">
-                    <a>Contacts</a>
-                </li>
-
-                <li class="scroll-to-link " id="content-phones">
-                    <a>Phones</a>
+                <li class="scroll-to-link " id="content-company">
+                    <a>Company</a>
                 </li>
 
                 <li class="scroll-to-link " id="content-phone">
                     <a>Phone</a>
                 </li>
 
-                <li class="scroll-to-link" id="content-location">
-                    <a>Location</a>
+                <li class="scroll-to-link " id="content-phones">
+                    <a>Phones</a>
                 </li>
 
-                <li class="scroll-to-link " id="content-message">
-                    <a>Message</a>
+                <li class="scroll-to-link " id="content-contacts">
+                    <a>Contacts</a>
                 </li>
 
                 <li class="scroll-to-link" id="content-simulation">
@@ -84,14 +80,6 @@
 
                 <li class="scroll-to-link" id="content-property">
                     <a>Property</a>
-                </li>
-
-                <li class="scroll-to-link " id="content-token">
-                    <a>Token</a>
-                </li>
-
-                <li class="scroll-to-link" id="content-tokendto">
-                    <a>TokenDto</a>
                 </li>
 
             </ul>
@@ -374,7 +362,7 @@
                     <thead>
                     <tr>
                         <th scope="col">Description</th>
-                        <th scope="col">Represents a Company</th>
+                        <th scope="col">Represents a Phones</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -434,35 +422,7 @@
                     </tbody>
                 </table>
             </section>
-        </div> <!--Fim div phones-->
-
-
-        <div class="overflow-hidden content-section" id="content-model-message">
-            <section class="content-text" id="model-message">
-                <h1><strong>Model Message</strong> </h1>
-                <table class="table table-hover">
-                    <thead>
-                    <tr>
-                        <th scope="col">Description</th>
-                        <th scope="col">Represents a location of an address</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-
-                    <tr>
-                        <th scope="row">mensagemDev</th>
-                        <td><i>string</i></td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">mensagemUsuario</th>
-                        <td><i>string</i></td>
-                    </tr>
-
-                    </tbody>
-                </table>
-            </section>
-        </div> <!--Fim div Location-->
+        </div> <!--Fim div contacts-->
 
 
 
@@ -668,6 +628,10 @@
 
         $('#content-persona').click(function() {
             $('html, body').animate({scrollTop:$('#content-model-persona').position().top}, 500);
+        })
+
+        $('#content-company').click(function() {
+            $('html, body').animate({scrollTop:$('#content-model-company').position().top}, 500);
         })
 
         $('#content-phones').click(function() {

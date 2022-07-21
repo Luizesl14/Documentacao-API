@@ -212,7 +212,7 @@ Example Response | Model
             <section class="content-text" id="content-size-type">
                 <div class="table-content">
                     <h1><strong>Type</strong> <small>Types for building the simulation</small></h1>
-                    <p>Get list of all typos:<br>
+                    <p>Get list of all types:<br>
                         <button class="get">Get</button>
                         <code class="higlighted break-word">/external/simulations/{type}</code>
                     </p>
@@ -716,6 +716,150 @@ Example Response | Model
             </table>
                 </div>
         </section>
+
+            <section class="content-code" id="content-code-simulation">
+                <div class="container-code">
+                    <pre>
+                        <code class="json">
+    Example Value | Model
+   {
+{
+    "amortizationType": "PRICE",
+    "operationType": "HOME_EQUITY",
+    "loanAmount": 100000.00,
+    "propertyValue": 190000.00,
+    "installmentsAmount": "120",
+    "leadSourceIncome": "AUTONOMO",
+    "familyIncome": 30000.00,
+    "buildingType": "PLOT_OF_LAND",
+    "propertyType": "PLOT_OF_LAND",
+    "privateArea": 100,
+    "loanObjective": "PROPERTY_FINANCING",
+    "guaranteePropertyAddress": {
+        "street": "string",
+        "neighborhood": "string",
+        "number": "integer",
+        "complement": "string",
+        "cep": "string",
+        "city": "string",
+        "ibge": "string",
+        "uf": "string",
+        "country": "string"
+    },
+    "sameAddressWarrantyHome": false,
+    "persona": {
+        "name": "string",
+        "taxId": "string",
+        "personaType": "NATURAL_PERSON",
+        "maritalStatus": "SOLTEIRO",
+        "contacts": [
+            {
+                "email": "teste@blue.com",
+                "type": "PERSONAL",
+                "principal": true
+            }
+        ],
+        "phones": [
+            {
+                "phone": {
+                    "number": "string",
+                    "isWhatsApp": false
+                },
+                "type": "COMMERCIAL",
+                "principal": true
+            }
+        ]
+    }
+}
+                        </code>
+                    </pre>
+                </div>
+
+
+                <div class="container-code">
+                    <pre>
+                        <code class="json">
+    Example Response | Model
+  {
+    "id": 0,
+    "persona": {
+        "id": 0,
+        "name": "string",
+        "taxId": "string",
+        "personaType": "NATURAL_PERSON",
+        "genderType": "MALE",
+        "rg": "string",
+        "orgaoEmissor": "string",
+        "maritalStatus": "SOLTEIRO",
+        "nationality": "string",
+        "citizenship": "string",
+        "birthDate": "string",
+        "motherName": "string",
+        "sourceIncome": "string",
+        "phones": [
+            {
+                "id": 0,
+                "phone": {
+                    "id": 0,
+                    "number": "string",
+                    "isWhatsApp": false
+                },
+                "type": "COMMERCIAL",
+                "principal": true,
+                "createdAt": "string"
+            }
+        ],
+        "bankAccounts": [],
+        "companion": null,
+        "composeIncomes": [],
+        "contacts": [
+            {
+                "id": 0,
+                "email": "string",
+                "type": "PERSONAL",
+                "principal": true,
+                "createdAt": "string"
+            }
+        ],
+        "occupation": null,
+        "pep": null,
+        "createdAt": "string",
+        "updatedAt": null,
+        "deletedAt": null,
+        "naturalPerson": true
+    },
+    "leadCorporateType": null,
+    "operationType": "HOME_EQUITY",
+    "propertyValue": 190000,
+    "amortizationType": "PRICE",
+    "loanAmount": 3005645.64,
+    "guaranteePropertyAddress": {
+        "id": 0,
+        "street": "string",
+        "neighborhood": "string",
+        "number": "string",
+        "complement": "string",
+        "cep": "string",
+        "city": "string",
+        "uf": "string",
+        "country": "string",
+        "location": string,
+        "ibge": "string"
+    },
+    "propertyType": "PLOT_OF_LAND",
+    "buildingType": "PLOT_OF_LAND",
+    "privateArea": 0,
+    "leadSourceIncome": "AUTONOMO",
+    "balanceDue": null,
+    "loanObjective": "PROPERTY_FINANCING",
+    "partnerId": 0,
+    "installmentsAmount": 0,
+    "status": null
+}
+                        </code>
+                    </pre>
+                </div>
+            </section>
 
     </div><!--Fim Simulation-->
 
