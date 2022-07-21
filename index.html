@@ -63,6 +63,14 @@
                 <a>Types</a>
             </li>
 
+            <li class="scroll-to-link " id="content-document">
+                <a>Document</a>
+            </li>
+
+            <li class="scroll-to-link " id="content-document-upload">
+                <a>Upload</a>
+            </li>
+
             <li class="scroll-to-link " id="content-simulation">
                 <a>Simulations</a>
             </li>
@@ -109,9 +117,13 @@
             <section class="content-text" id="content-size-status">
                 <div class="table-content">
                     <h1><strong>Status</strong> <small>Search status of the simulation and also the proposal</small></h1>
-                    <p>Get status by id:<br>
+                    <p>Get status by simulation id:<br>
                         <button class="get">Get</button>
-                        <code class="higlighted break-word">/external/simulations/status/{id}</code>
+                        <code class="higlighted break-word">/external/simulations-status/{id}</code>
+                    </p>
+                    <p>Get status by proposal id:<br>
+                        <button class="get">Get</button>
+                        <code class="higlighted break-word">/external/proposal-status/{id}</code>
                     </p>
                     <h4>PARAMETERS</h4>
                     </br>
@@ -170,11 +182,24 @@
                 <div class="container-code">
                     <pre class="scroller">
                         <code class="json">
+Simulation:
+
 Example Response | Model
 {
-    "id": 1,
+    "id": 0,
     "status": "ACTIVE",
     "description": "Ativa",
+    "subReasonForLoss": null
+}
+
+
+Proposal:
+
+Example Response | Model
+{
+    "id": 0,
+    "status": "WAITING_DOCUMENTS",
+    "description": "Documentos Iniciais",
     "subReasonForLoss": null
 }
                         </code>
@@ -276,42 +301,48 @@ Example Response | Model
         </div><!--Fim Types-->
 
 
-        <div class="overflow-hidden content-section" id="content-post-password">
-            <section class="content-text" id="content-size-password">
-            <div class="table-content">
-                <h1><strong>Password</strong> <small>Request password reset via email</small></h1>
-                    <p>Request password reset via email<br>
-                        <button class="post">POST</button>
-                        <code class="higlighted break-word">/external/password/forgot/{email}</code>
+
+        <div class="overflow-hidden content-section" id="content-get-document">
+            <section class="content-text" id="content-size-document">
+                <div class="table-content">
+                    <h1><strong>Document</strong> <small>Searching and sending documents</small></h1>
+                    <p>Get paginated list of documents:<br>
+                        <button class="get">Get</button>
+                        <code class="higlighted break-word">/external/documents</code>
                     </p>
-                     <h4>PARAMETERS</h4>
+                    <h4>FORM</h4>
+                    </br>
                     <table class="central-overflow-x">
                         <thead>
-                            <tr>
-                                <th><strong>Name</strong></th>
-                                <th><strong>Description</strong></th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td class="result-light"><strong>email<sup>*required</sup></strong>
-                                    <p><i>string</i> <i>(path)</i></p>
-                                </td>
-                                <td class="result-light">Email registered in the system that will be used to request token for password reset</td>
-                            </tr>
+                        <tr>
+                            <th><strong>Name</strong></th>
+                            <th><strong>Description</strong></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="result-light"><strong>page <sup>*required</sup></strong>
+                            </td>
+                            <td class="result-light"> Page you want to grab</td>
+                        </tr>
+
+                        <tr>
+                            <td class="result-light"><strong>size <sup>*required</sup></strong>
+                            </td>
+                            <td class="result-light"> Number of items within the page</td>
+                        </tr>
+
                         </tbody>
                     </table>
 
-                <h4>RESPONSES</h4>
-
-
-                <table class="central-overflow-x">
-                    <thead>
+                    <h4>RESPONSES</h4>
+                    <table class="central-overflow-x">
+                        <thead>
                         <tr>
                             <th><strong>Code</strong></th>
                             <th><strong>Descriptio</strong>n</th>
                         </tr>
-                    </thead>
+                        </thead>
                         <tbody>
                         <tr>
                             <td class="result"><strong>200</strong></td>
@@ -319,44 +350,303 @@ Example Response | Model
                         </tr>
 
                         <tr>
-                            <td class="result-light"><strong>201</strong></td>
-                            <td class="result-light"><i>Created</i></td>
+                            <td class="result-light"><strong>401</strong></td>
+                            <td class="result-light"><i>You are not authorized to view the resource</i></td>
                         </tr>
 
                         <tr>
-                            <td class="result"><strong>401</strong></td>
-                            <td class="result"><i>You are not authorized to view the resource</i></td>
+                            <td class="result"><strong>403</strong></td>
+                            <td class="result"><i>Accessing the resource you were trying to reach is forbidden</i></td>
                         </tr>
 
                         <tr>
-                            <td class="result-light"><strong>403</strong></td>
-                            <td class="result-light"><i>Accessing the resource you were trying to reach is forbidden</i></td>
-                        </tr>
-
-                        <tr>
-                            <td class="result"><strong>404</strong></td>
-                            <td class="result"><i>The resource you were trying to reach is not found</i></td>
+                            <td class="result-light"><strong>404</strong></td>
+                            <td class="result-light"><i>The resource you were trying to reach is not found</i></td>
                         </tr>
                         </tbody>
-                </table>
-            </div>
+                    </table>
 
+                </div>
             </section>
 
-            <section class="content-code" id="content-code-password">
+            <section class="content-code" id="content-size-all-documents">
                 <div class="container-code">
-                    <pre>
+                    <pre class="scroller">
                         <code class="json">
-    Example Response | Model
-   {
-      "mensagemDev": "string",
-      "mensagemUsuario": "string"
-   }
+
+ Example Response | Model
+
+"content": [
+        {
+            "id": 0,
+            "createdAt": "string",
+            "updatedAt": "string",
+            "name": "string",
+            "description": "string",
+            "parent": [],
+            "checklist": false,
+            "essential": false,
+            "documentFixed": false
+        },
+        {
+            "id": 0,
+            "createdAt": "string",
+            "updatedAt": "string",
+            "name": "string",
+            "description": "string",
+            "parent": [],
+            "checklist": false,
+            "essential": false,
+            "documentFixed": false
+        },
+        {
+            "id": 0,
+            "createdAt": "string",
+            "updatedAt": "string",
+            "name": "string",
+            "description": "string",
+            "parent": [],
+            "checklist": false,
+            "essential": false,
+            "documentFixed": false
+        }
+    ],
+    "pageable": {
+        "sort": {
+            "unsorted": true,
+            "sorted": false,
+            "empty": true
+        },
+        "offset": 0,
+        "pageNumber": 0,
+        "pageSize": 0,
+        "paged": true,
+        "unpaged": false
+    },
+    "last": false,
+    "totalElements": 0,
+    "totalPages": 0,
+    "size": 0,
+    "number": 0,
+    "sort": {
+        "unsorted": true,
+        "sorted": false,
+        "empty": true
+    },
+    "first": false,
+    "numberOfElements": 0,
+    "empty": false
+}
                         </code>
                     </pre>
                 </div>
             </section>
-        </div> <!--Fim div Password-->
+
+        </div><!--Fim Document-->
+
+
+        <div class="overflow-hidden content-section" id="content-get-document-byid">
+            <section class="content-text" id="content-size-document-by-id">
+                <div class="table-content">
+                    <p>Get documents by id:<br>
+                        <button class="get">Get</button>
+                        <code class="higlighted break-word">/external/document/{id}</code>
+                    </p>
+                    <h4>FORM</h4>
+                    </br>
+                    <table class="central-overflow-x">
+                        <thead>
+                        <tr>
+                            <th><strong>Name</strong></th>
+                            <th><strong>Description</strong></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="result-light"><strong>Id <sup>*required</sup></strong>
+                            </td>
+                            <td class="result-light"> Specific ID document</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+
+                    <h4>RESPONSES</h4>
+                    <table class="central-overflow-x">
+                        <thead>
+                        <tr>
+                            <th><strong>Code</strong></th>
+                            <th><strong>Descriptio</strong>n</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="result"><strong>200</strong></td>
+                            <td class="result"><i>Successfully retrieved object</i></td>
+                        </tr>
+
+                        <tr>
+                            <td class="result-light"><strong>401</strong></td>
+                            <td class="result-light"><i>You are not authorized to view the resource</i></td>
+                        </tr>
+
+                        <tr>
+                            <td class="result"><strong>403</strong></td>
+                            <td class="result"><i>Accessing the resource you were trying to reach is forbidden</i></td>
+                        </tr>
+
+                        <tr>
+                            <td class="result-light"><strong>404</strong></td>
+                            <td class="result-light"><i>The resource you were trying to reach is not found</i></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </section>
+
+            <section class="content-code" id="content-size-all-documents-by-id">
+                <div class="container-code">
+                    <pre class="scroller">
+                        <code class="json">
+
+Example Response | Model
+
+{
+    "id": 0,
+    "createdAt": "string",
+    "updatedAt": "string",
+    "name": "string",
+    "description": "string",
+    "parent": [],
+    "checklist": false,
+    "essential": false,
+    "documentFixed": false
+}
+                        </code>
+                    </pre>
+                </div>
+            </section>
+        </div>
+
+
+
+        <div class="overflow-hidden content-section" id="content-post-upload">
+            <section class="content-text" id="content-size-upload">
+                <div class="table-content">
+                    <h1><strong>Upload
+                    </strong> <small>Possible to upload documents</small></h1>
+                    <p>Post to upload documents:<br>
+                        <button class="post">Post</button>
+                        <code class="higlighted break-word">/external/proposal/{id}/document-type/{id}</code>
+                    </p>
+                    <h4>PARAMETERS</h4>
+                    </br>
+                    <table class="central-overflow-x">
+                        <thead>
+                        <tr>
+                            <th><strong>Name</strong></th>
+                            <th><strong>Description</strong></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="result-light"><strong>id <sup>*required</sup></strong>
+                            </td>
+                            <td class="result-light"> Proposal Id</td>
+                        </tr>
+
+                        <tr>
+                            <td class="result-light"><strong>id <sup>*required</sup></strong>
+                            </td>
+                            <td class="result-light"> Document type  Id</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+
+                    <h4>FORM-DATA</h4>
+                    </br>
+                    <table class="central-overflow-x">
+                        <thead>
+                        <tr>
+                            <th><strong>Name</strong></th>
+                            <th><strong>Value</strong></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="result-light"><strong>document <sup>*required</sup></strong>
+                            </td>
+                            <td class="result-light"> File value type (multipartFile) </td>
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+
+                    <h4>RESPONSES</h4>
+                    <table class="central-overflow-x">
+                        <thead>
+                        <tr>
+                            <th><strong>Code</strong></th>
+                            <th><strong>Descriptio</strong>n</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="result"><strong>200</strong></td>
+                            <td class="result"><i>Successfully retrieved object</i></td>
+                        </tr>
+
+                        <tr>
+                            <td class="result-light"><strong>401</strong></td>
+                            <td class="result-light"><i>You are not authorized to view the resource</i></td>
+                        </tr>
+
+                        <tr>
+                            <td class="result"><strong>403</strong></td>
+                            <td class="result"><i>Accessing the resource you were trying to reach is forbidden</i></td>
+                        </tr>
+
+                        <tr>
+                            <td class="result-light"><strong>404</strong></td>
+                            <td class="result-light"><i>The resource you were trying to reach is not found</i></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </section>
+
+            <section class="content-code" id="content-size-upload-document">
+                <div class="container-code">
+                    <pre class="scroller">
+                        <code class="json">
+Example Response | Model
+[
+    {
+        "value": "APARTMENT",
+        "description": "Apartamento",
+    },
+    {
+        "value": "HOUSE",
+        "description": "Casa",
+    },
+    {
+        "value": "COMMERCIAL",
+        "description": "Comercial",
+    },
+    {
+        "value": "PLOT_OF_LAND",
+        "description": "Terreno",
+    }
+]
+                        </code>
+                    </pre>
+                </div>
+            </section>
+        </div><!--Fim upload-->
 
 
 
@@ -427,149 +717,6 @@ Example Response | Model
                 </div>
         </section>
 
-        <section class="content-code" id="content-code-simulation">
-            <div class="container-code">
-                    <pre>
-                        <code class="json">
-    Example Value | Model
-   {
-{
-    "amortizationType": "PRICE",
-    "operationType": "HOME_EQUITY",
-    "loanAmount": 100000.00,
-    "propertyValue": 190000.00,
-    "installmentsAmount": "120",
-    "leadSourceIncome": "AUTONOMO",
-    "familyIncome": 30000.00,
-    "buildingType": "PLOT_OF_LAND",
-    "propertyType": "PLOT_OF_LAND",
-    "privateArea": 100,
-    "loanObjective": "PROPERTY_FINANCING",
-    "guaranteePropertyAddress": {
-        "street": "string",
-        "neighborhood": "string",
-        "number": "integer",
-        "complement": "string",
-        "cep": "string",
-        "city": "string",
-        "ibge": "string",
-        "uf": "string",
-        "country": "string"
-    },
-    "sameAddressWarrantyHome": false,
-    "persona": {
-        "name": "string",
-        "taxId": "string",
-        "personaType": "NATURAL_PERSON",
-        "maritalStatus": "SOLTEIRO",
-        "contacts": [
-            {
-                "email": "teste@blue.com",
-                "type": "PERSONAL",
-                "principal": true
-            }
-        ],
-        "phones": [
-            {
-                "phone": {
-                    "number": "string",
-                    "isWhatsApp": false
-                },
-                "type": "COMMERCIAL",
-                "principal": true
-            }
-        ]
-    }
-}
-                        </code>
-                    </pre>
-            </div>
-
-
-            <div class="container-code">
-                    <pre>
-                        <code class="json">
-    Example Response | Model
-  {
-    "id": 0,
-    "persona": {
-        "id": 0,
-        "name": "string",
-        "taxId": "string",
-        "personaType": "NATURAL_PERSON",
-        "genderType": "MALE",
-        "rg": "string",
-        "orgaoEmissor": "string",
-        "maritalStatus": "SOLTEIRO",
-        "nationality": "string",
-        "citizenship": "string",
-        "birthDate": "string",
-        "motherName": "string",
-        "sourceIncome": "string",
-        "phones": [
-            {
-                "id": 0,
-                "phone": {
-                    "id": 0,
-                    "number": "string",
-                    "isWhatsApp": false
-                },
-                "type": "COMMERCIAL",
-                "principal": true,
-                "createdAt": "string"
-            }
-        ],
-        "bankAccounts": [],
-        "companion": null,
-        "composeIncomes": [],
-        "contacts": [
-            {
-                "id": 0,
-                "email": "string",
-                "type": "PERSONAL",
-                "principal": true,
-                "createdAt": "string"
-            }
-        ],
-        "occupation": null,
-        "pep": null,
-        "createdAt": "string",
-        "updatedAt": null,
-        "deletedAt": null,
-        "naturalPerson": true
-    },
-    "leadCorporateType": null,
-    "operationType": "HOME_EQUITY",
-    "propertyValue": 190000,
-    "amortizationType": "PRICE",
-    "loanAmount": 3005645.64,
-    "guaranteePropertyAddress": {
-        "id": 11718,
-        "street": "string",
-        "neighborhood": "string",
-        "number": "string",
-        "complement": "string",
-        "cep": "string",
-        "city": "stringo",
-        "uf": "string",
-        "country": "string",
-        "location": string,
-        "ibge": "string"
-    },
-    "propertyType": "PLOT_OF_LAND",
-    "buildingType": "PLOT_OF_LAND",
-    "privateArea": 100.0,
-    "leadSourceIncome": "AUTONOMO",
-    "balanceDue": null,
-    "loanObjective": "PROPERTY_FINANCING",
-    "partnerId": 0,
-    "installmentsAmount": 0,
-    "status": null
-}
-                        </code>
-                    </pre>
-            </div>
-        </section>
     </div><!--Fim Simulation-->
 
 
@@ -577,24 +724,35 @@ Example Response | Model
             <section class="content-text" id="content-size-token">
                 <div class="table-content">
                     <h1><strong>Tokens</strong> <small>Management the validation token</small></h1>
-                    <p>Get a partner by CPF or CNPJ:<br>
+                    <p>Get token:<br>
                         <button class="post">POST</button>
-                        <code class="higlighted break-word">/external/2fa</code>
+                        <code class="higlighted break-word">/oauth/token</code>
                     </p>
-                    <h4>PARAMETERS</h4>
+                    <h4>FORM</h4>
                     <table class="central-overflow-x">
                         <thead>
                         <tr>
                             <th><strong>Name</strong></th>
-                            <th><strong>Description</strong></th>
+                            <th><strong>Value</strong></th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                            <td class="result-light"><strong>tokenDto<sup>*required</sup></strong>
-                                <p><i>(body)</i></p>
+                            <td class="result-light"><strong>username<sup>*required</sup></strong>
                             </td>
-                            <td class="result-light">Token request object</td>
+                            <td class="result-light">user login</td>
+                        </tr>
+
+                        <tr>
+                            <td class="result-light"><strong>password<sup>*required</sup></strong>
+                            </td>
+                            <td class="result-light">user password</td>
+                        </tr>
+
+                        <tr>
+                            <td class="result-light"><strong>grant_type<sup>*required</sup></strong>
+                            </td>
+                            <td class="result-light">password</td>
                         </tr>
                         </tbody>
                     </table>
@@ -642,145 +800,27 @@ Example Response | Model
 
 
             <section class="content-code" id="content-code-token">
-                <div class="container-code">
-                    <pre>
-                        <code class="json">
-    Example Value | Model
-    {
-      "id": 0,
-      "sendBy": "string",
-      "type": "USER"
-    }
-                        </code>
-                    </pre>
-                </div>
 
                 <div class="container-code">
                     <pre>
                         <code class="json">
     Example Response | Model
+
     {
-      "entityId": 0,
-      "entityName": "USER",
-      "expired": true,
-      "expiryDate": "2022-03-18T01:42:09.480Z",
-      "id": 0,
-      "token": "string"
-    }
+    "access_token": "string",
+    "token_type": "bearer",
+    "refresh_token": "string",
+    "expires_in": 0,
+    "scope": "string",
+    "user_id": 0,
+    "jti": "string"
+
                         </code>
                     </pre>
                 </div>
             </section>
-
     </div>
 
-
-
-
-        <div class="overflow-hidden content-section-none" id="content-post-token-none">
-        <section class="content-text" id="content-size-token-none">
-            <div class="table-content">
-                <h1><strong>Tokens</strong> <small>Management the validation token</small></h1>
-                <p>Checks if pin code is valid:<br>
-                    <button class="get">GET</button>
-                    <code class="higlighted break-word">/external/2fa/{id}/{type}/{token}</code>
-                </p>
-                <h4>PARAMETERS</h4>
-                <table class="central-overflow-x">
-                    <thead>
-                    <tr>
-                        <th><strong>Name</strong></th>
-                        <th><strong>Description</strong></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td class="result-light"><strong>id<sup>*required</sup></strong>
-                            <p><i>integer($int32)</i><i>(path)</i></p>
-                        </td>
-                        <td class="result-light">id</td>
-                    </tr>
-                    </tbody>
-                </table>
-
-
-                <table class="central-overflow-x">
-                    <thead>
-                    <tr>
-                        <th><strong>Name</strong></th>
-                        <th><strong>Description</strong></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td class="result-light"><strong>token<sup>*required</sup></strong>
-                            <p><i>integer($int32)</i><i>(path)</i></p>
-                        </td>
-                        <td class="result-light">token</td>
-                    </tr>
-
-                    </tbody>
-                </table>
-
-                <table class="central-overflow-x">
-                    <thead>
-                    <tr>
-                        <th><strong>Name</strong></th>
-                        <th><strong>Description</strong></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td class="result-light"><strong>type<sup>*required</sup></strong>
-                            <p><i>string</i><i>(path)</i></p>
-                        </td>
-                        <td class="result-light">type
-                            <p></p>
-                            <p><i></i><i>Available values : USER, LEAD, PARTNER</i></p>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-
-                <h4>RESPONSES</h4>
-
-
-                <table class="central-overflow-x">
-                    <thead>
-                    <tr>
-                        <th><strong>Code</strong></th>
-                        <th><strong>Descriptio</strong>n</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr class="success">
-                        <td class="result"><strong>200</strong></td>
-                        <td class="result"><i>Successfully retrieved object</i></td>
-                    </tr>
-
-                    <tr>
-                        <td class="result-light"><strong>201</strong></td>
-                        <td class="result-light"><i>Created</i></td>
-                    </tr>
-
-                    <tr>
-                        <td class="result"><strong>401</strong></td>
-                        <td class="result"><i>You are not authorized to view the resource</i></td>
-                    </tr>
-
-                    <tr>
-                        <td class="result-light"><strong>403</strong></td>
-                        <td class="result-light"><i>Accessing the resource you were trying to reach is forbidden</i></td>
-                    </tr>
-
-                    <tr>
-                        <td class="result"><strong>404</strong></td>
-                        <td class="result"><i>The resource you were trying to reach is not found</i></td>
-                    </tr>
-                    </tbody>
-                </table>
-
-            </div> <!--Fim div Tokens-->
         </section>
 
         <section class="content-code-none" id="content-code-token-none">
@@ -817,6 +857,14 @@ Example Response | Model
 
         $('#content-type').click(function() {
             $('html, body').animate({scrollTop:$('#content-get-type').position().top}, 500);
+        })
+
+        $('#content-document').click(function() {
+            $('html, body').animate({scrollTop:$('#content-get-document').position().top}, 500);
+        })
+
+        $('#content-document-upload').click(function() {
+            $('html, body').animate({scrollTop:$('#content-post-upload').position().top}, 500);
         })
 
         $('#content-password').click(function() {
